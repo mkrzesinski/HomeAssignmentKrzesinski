@@ -52,6 +52,43 @@ Implementation is scalable and allows user to extend tests scope for further ini
 > TODO 
 
 ### 5. Test scenarios
+
+Test scenarios focus on following Github MVP functionalities.
+
+- Logging, authentication,
+- Repository workflow,
+- Issue workflow,
+- Pull Requests workflow.
+
+Predicates:
+- **User credentials:** stored in _test.properties_ file,
+- **Repository data:** stored in _test.properties_ file,
+
+#### Logging, authentication
+
+| Scenario name                     | Description                                          | Domain | Test Data                                | Test steps                                                                                | Expected Results                                                                                                                           |
+|-----------------------------------|------------------------------------------------------|--------|------------------------------------------|-------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
+| SignIn with correct credentials   | Logging to existing account with correct credentials | UI     | User credentials                         | 1. Open github.com,<br>2. Fill username and passwords fields,<br>3. Click Sign In button. | 1. User should be able to signin with given credentials,<br>2. Main account page should be displayed.                                      |
+| SignIn with incorrect credentials | Logging to existing account with user name           | UI     | User credentials,<br>incorrect username. | 1. Open github.com,<br>2. Fill username and passwords fields,<br>3. Click Sign In button. | 1. User should NOT be able to signin with given credentials,<br>2. Propper error message should appear: 'Incorrect user name or password'. |
+| SignIn with correct passkey       | Successful authentication via API                    | API    | TODO                                     | TODO                                                                                      | TODO                                                                                                                                       |
+| SignIn with incorrect passkey     | Unsuccessful authentication via API                  | API    | TODO                                     | TODO                                                                                      | TODO                                                                                                                                       |
+
+#### Repository workflow,
+
+| Scenario name                     | Description                                          | Domain | Test Data                                  | Test steps                                    | Expected Results                                                                                     |
+|-----------------------------------|------------------------------------------------------|--------|--------------------------------------------|-----------------------------------------------|------------------------------------------------------------------------------------------------------|
+| Repository creation               | Empty repository creation                            | UI     | Empty repository data                      | 1. SignIn,<br>2. Create empty repository,<br> | 1. User should be able to create repository, proper data is displayed on created repository page     |
+| SignIn with incorrect credentials | Empty repository creation with already existing name | UI     | Empty repository data, with existing name. | 1. SignIn,<br>2. Create empty repository,<br> | 1. User should NOT be able to create repository with existing name, proper popup should be displayed |
+| SignIn with correct passkey       | Basic scenario for authentication via API            | API    | TODO                                       | TODO                                          | TODO                                                                                                 |
+| Repository creation               | Empty repository creation                            | API    | TODO                                       | TODO                                          | TODO                                                                                                 |
+
+
+#### Issue Workflow,
+
+> TODO
+
+#### Pull Requests workflow,
+
 > TODO
 
 ### 6. How to run
