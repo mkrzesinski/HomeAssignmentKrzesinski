@@ -9,8 +9,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import java.util.concurrent.TimeUnit;
-
 @Getter
 public class LoginPage extends AbstractPage {
 
@@ -51,8 +49,8 @@ public class LoginPage extends AbstractPage {
 
     @SneakyThrows
     public void fillCredencialsForDefaultUser(@org.jetbrains.annotations.NotNull JavascriptExecutor javascriptExecutor) {
-        javascriptExecutor.executeScript("arguments[0].value=arguments[1];", userNameField, ConfigProvider.getProperty("defaultusername"));
-        javascriptExecutor.executeScript("arguments[0].value=arguments[1];", passwordField, ConfigProvider.getProperty("defaulttoken"));
+        javascriptExecutor.executeScript("arguments[0].value=arguments[1];", userNameField, System.getenv("GITHUB_USER_NAME"));
+        javascriptExecutor.executeScript("arguments[0].value=arguments[1];", passwordField, System.getenv("GITHUB_USER_PASSWORD"));
     }
 
     public void fillCredencialsWithGivenData(@org.jetbrains.annotations.NotNull JavascriptExecutor javascriptExecutor, final String userName, final String password){
