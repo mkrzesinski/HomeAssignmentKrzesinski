@@ -122,7 +122,7 @@
                 <version>${maven-surefire-plugin.version}</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>src\test\resources\runners\${suiteXmlFile}</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/runners/githubmvptests.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
                 <dependencies>
