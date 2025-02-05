@@ -58,8 +58,10 @@ Implementation is scalable and allows user to extend tests scope for further ini
 
 ### 3. How to run <a id="howtorun"></a>
 
-**Note: Secrets needed to execute tests are not kept in the repository. They are provided by Github.
-You can find them under link:** 
+**Note: Secrets needed to execute tests are not kept in the repository. They are provided by Github.<br>
+Below link may work only for repository owner.
+To reach secrets please email me directly with `maciej.krzesinski@gmail.com`**
+
 
 > https://github.com/mkrzesinski/HomeAssignmentKrzesinski/settings/secrets/actions
 
