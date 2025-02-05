@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.AssertJUnit.assertEquals;
 
-@Feature("GitHub MVP - Logging")
+@Feature("GitHub MVP tests - Login")
 @Severity(SeverityLevel.CRITICAL)
 public class LoginTests extends BaseTest {
 

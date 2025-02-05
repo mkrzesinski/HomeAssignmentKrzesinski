@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="GitHub MVP test suit" parallel="classes" thread-count="2">
+    <test name="GitHub API MVP Tests">
+        <classes>
+            <class name="api.tests.LoginTests"/>
+            <class name="api.tests.RepositoryTests"/>
+            <class name="api.tests.PullRequestTests"/>
+            <class name="api.tests.IssueTests"/>
+        </classes>
+    </test>
+</suite>

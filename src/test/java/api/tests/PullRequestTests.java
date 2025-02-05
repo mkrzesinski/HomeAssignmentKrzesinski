@@ -2,11 +2,17 @@ package api.tests;
 
 import api.base.BaseTest;
 import api.models.GitHubPullRequest;
+import api.models.GitHubRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import io.restassured.response.Response;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.http.HttpStatus;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.nio.charset.StandardCharsets;
@@ -15,10 +21,11 @@ import java.util.Map;
 
 import static org.testng.AssertJUnit.assertEquals;
 
+@Feature("GitHub MVP tests - Pull requests")
+@Severity(SeverityLevel.CRITICAL)
 public class PullRequestTests extends BaseTest {
 
-    private static final String HEAD_BRANCH = "feature-branch";
-    private static final String BASE_BRANCH = "main";
+
     private static final String DESCRIPTION = "Description " + generateRandomPostFix();
     private static final String NEW_PR_TITLE = "New PR " + generateRandomPostFix();
 
@@ -31,9 +38,10 @@ public class PullRequestTests extends BaseTest {
     private String requestBody;
     private int pullRequestId;
 
+
     @Test(priority = 1)
     public void testCreatePullRequest() throws JsonProcessingException {
-        updateReadmeFile();
+        updateReadmeFile(HEAD_BRANCH, INIT_REPOSITORY_NAME);
         this.gitHubPullRequest = new GitHubPullRequest(NEW_PR_TITLE, HEAD_BRANCH, BASE_BRANCH, DESCRIPTION);
         this.requestBody = objectMapper.writeValueAsString(this.gitHubPullRequest);
         Response response = apiClient.createNewPullRequest(GITHUB_USER_TOKEN, this.requestBody, GITHUB_USER_NAME, INIT_REPOSITORY_NAME).execute();
@@ -48,10 +56,10 @@ public class PullRequestTests extends BaseTest {
         assertEquals("Pull Request successfully merged", response.jsonPath().getString("message"));
     }
 
-    @Test(priority = 3)
+    @Test(priority = 3, dependsOnMethods = "testMergePullRequest")
     public void testClosePullRequest() throws JsonProcessingException {
         Response response;
-        updateReadmeFile();
+        updateReadmeFile(HEAD_BRANCH, INIT_REPOSITORY_NAME);
         this.gitHubPullRequest = new GitHubPullRequest(NEW_PR_TITLE, HEAD_BRANCH, BASE_BRANCH, DESCRIPTION);
         this.requestBody = objectMapper.writeValueAsString(this.gitHubPullRequest);
         response = apiClient.createNewPullRequest(GITHUB_USER_TOKEN, this.requestBody, GITHUB_USER_NAME, INIT_REPOSITORY_NAME).execute();
@@ -63,7 +71,7 @@ public class PullRequestTests extends BaseTest {
         assertEquals("closed", response.jsonPath().getString("state"));
     }
 
-    private Map<String, Object> prepareReadmeUpdateBody() {
+    private Map<String, Object> prepareReadmeUpdateBody(String branch) {
         Response response = apiClient.getFileSha(GITHUB_USER_TOKEN, GITHUB_USER_NAME, INIT_REPOSITORY_NAME, README_FILE_PATH).execute();
         String fileSha = response.jsonPath().getString("sha");
         String encodedContent = Base64.encodeBase64String(README_FILE_NEW_CONTENT.getBytes(StandardCharsets.UTF_8));
@@ -74,12 +82,16 @@ public class PullRequestTests extends BaseTest {
         if (fileSha != null) {
             body.put("sha", fileSha);
         }
-        body.put("branch", HEAD_BRANCH);
+        body.put("branch", branch);
         return body;
     }
 
-    private void updateReadmeFile() throws JsonProcessingException {
-        Response response = apiClient.updateFile(GITHUB_USER_TOKEN, objectMapper.writeValueAsString(prepareReadmeUpdateBody()), GITHUB_USER_NAME, INIT_REPOSITORY_NAME, README_FILE_PATH).execute();
+    private void updateReadmeFile(String branch, String repository) throws JsonProcessingException {
+        Response response = apiClient.updateFile(GITHUB_USER_TOKEN, objectMapper.writeValueAsString(prepareReadmeUpdateBody(branch)), GITHUB_USER_NAME, repository, README_FILE_PATH).execute();
+    }
+
+    private void checkIgBranchExists() {
+
     }
 }
 

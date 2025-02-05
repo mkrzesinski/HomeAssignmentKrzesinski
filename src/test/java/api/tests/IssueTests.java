@@ -15,7 +15,7 @@ import java.util.UUID;
 
 import static org.testng.AssertJUnit.assertEquals;
 
-@Feature("GitHub MVP - Logging")
+@Feature("GitHub MVP tests - Issues")
 @Severity(SeverityLevel.CRITICAL)
 public class IssueTests extends BaseTest {
 
@@ -47,7 +47,6 @@ public class IssueTests extends BaseTest {
         assertEquals(HttpStatus.SC_OK, response.getStatusCode());
         assertEquals(EDITED_ISSUE_TITLE, response.jsonPath().getString("title"));
         assertEquals(ISSUE_STATE_OPEN, response.jsonPath().getString("state"));
-
     }
 
     @Test(priority = 3, dependsOnMethods = "editIssue")

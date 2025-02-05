@@ -55,4 +55,20 @@ public class ApiClient {
     public PutUpdateFile updateFile(String token, String requestBody, String userName, String repositoryName, String filePath) {
         return new PutUpdateFile(this.requestSpecBuilderSupplier.get(), token, requestBody, userName, repositoryName, filePath);
     }
+
+    public PostCreateNewBranch createNewBranch(String token, String requestBody, String userName, String repositoryName){
+        return new PostCreateNewBranch(this.requestSpecBuilderSupplier.get(), token, requestBody, userName, repositoryName);
+    }
+
+    public GetCheckIfRepositoryExists checkIfRepositoryExists(String token, String userName, String repositoryName){
+        return new GetCheckIfRepositoryExists(this.requestSpecBuilderSupplier.get(), token, userName,repositoryName);
+    }
+
+    public GetCheckIfBranchExists checkIfBranchExists(String token, String userName, String repositoryName, String branchName){
+        return new GetCheckIfBranchExists(this.requestSpecBuilderSupplier.get(), token, userName,repositoryName, branchName);
+    }
+
+    public GetBranchSha getBaseBranchSha(String token, String userName, String repositoryName, String branchName){
+        return new GetBranchSha(this.requestSpecBuilderSupplier.get(), token, userName,repositoryName, branchName);
+    }
 }

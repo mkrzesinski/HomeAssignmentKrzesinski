@@ -16,4 +16,5 @@ public class GitHubRepository {
     private String description;
     @JsonProperty("private")
     private boolean isPrivate;
+    private boolean auto_init;
 }
