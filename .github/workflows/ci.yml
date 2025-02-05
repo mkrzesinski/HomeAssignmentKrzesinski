@@ -57,6 +57,6 @@ jobs:
         if: success()
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.USER_TOKEN }}
           publish_dir: ./target/site/allure-maven/
           publish_branch: gh-pages
