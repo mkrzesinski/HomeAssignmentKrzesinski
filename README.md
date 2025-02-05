@@ -48,7 +48,7 @@ Implementation is scalable and allows user to extend tests scope for further ini
 **Project build:** Maven,<br>
 **Testing Framework:** TestNG,<br>
 **Testing domains:** API, (implemented example of UI tests as well),<br>
-**Test execution by:** dedicated xml runners, test classes, test methods,<br>
+**Test execution by:** GitHub actions, dedicated xml runners, test classes, test methods,<br>
 **Automation Framework:** Selenium for UI testing, REST Assured for API testing,<br>
 **Concurrency:** provided by TestNG,<br>
 **Reporting:** Allure, integrated also with GitHub actions<br>
