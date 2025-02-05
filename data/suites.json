@@ -1,0 +1,172 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "GitHub MVP test suit",
+    "children" : [ {
+      "name" : "GitHub API MVP Tests",
+      "children" : [ {
+        "name" : "api.tests.RepositoryTests",
+        "children" : [ {
+          "name" : "createRepository",
+          "uid" : "1e9872970457398",
+          "parentUid" : "04e994b461e1d327cdb42362ccb4ede2",
+          "status" : "passed",
+          "time" : {
+            "start" : 1738779225637,
+            "stop" : 1738779226837,
+            "duration" : 1200
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "cloneRepository",
+          "uid" : "587dfbccf9e7a05",
+          "parentUid" : "04e994b461e1d327cdb42362ccb4ede2",
+          "status" : "passed",
+          "time" : {
+            "start" : 1738779227394,
+            "stop" : 1738779227722,
+            "duration" : 328
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "deleteRepository",
+          "uid" : "64dcb257499292e5",
+          "parentUid" : "04e994b461e1d327cdb42362ccb4ede2",
+          "status" : "passed",
+          "time" : {
+            "start" : 1738779227725,
+            "stop" : 1738779228213,
+            "duration" : 488
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "04e994b461e1d327cdb42362ccb4ede2"
+      }, {
+        "name" : "api.tests.LoginTests",
+        "children" : [ {
+          "name" : "successfullLogin",
+          "uid" : "a731d80709e5b5da",
+          "parentUid" : "d1165dde24249aced1e9f31a73c36ab2",
+          "status" : "passed",
+          "time" : {
+            "start" : 1738779225638,
+            "stop" : 1738779225931,
+            "duration" : 293
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "unsuccessfullLoginWithInvalidToken",
+          "uid" : "2fcd162d323894ae",
+          "parentUid" : "d1165dde24249aced1e9f31a73c36ab2",
+          "status" : "passed",
+          "time" : {
+            "start" : 1738779225971,
+            "stop" : 1738779226186,
+            "duration" : 215
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "d1165dde24249aced1e9f31a73c36ab2"
+      }, {
+        "name" : "api.tests.PullRequestTests",
+        "children" : [ {
+          "name" : "testCreatePullRequest",
+          "uid" : "f60231f65132a0fc",
+          "parentUid" : "c542a11f56138d86b0727b4dfe567819",
+          "status" : "passed",
+          "time" : {
+            "start" : 1738779226191,
+            "stop" : 1738779228475,
+            "duration" : 2284
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "testMergePullRequest",
+          "uid" : "58712c4ace824087",
+          "parentUid" : "c542a11f56138d86b0727b4dfe567819",
+          "status" : "passed",
+          "time" : {
+            "start" : 1738779228478,
+            "stop" : 1738779230253,
+            "duration" : 1775
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "testClosePullRequest",
+          "uid" : "862c3127d02066cb",
+          "parentUid" : "c542a11f56138d86b0727b4dfe567819",
+          "status" : "passed",
+          "time" : {
+            "start" : 1738779230255,
+            "stop" : 1738779232815,
+            "duration" : 2560
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "c542a11f56138d86b0727b4dfe567819"
+      }, {
+        "name" : "api.tests.IssueTests",
+        "children" : [ {
+          "name" : "createAndDeleteIssue",
+          "uid" : "5f624aea82981730",
+          "parentUid" : "7e194912adb251fd59a322cf8fd4885e",
+          "status" : "passed",
+          "time" : {
+            "start" : 1738779226846,
+            "stop" : 1738779227390,
+            "duration" : 544
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "editIssue",
+          "uid" : "2dbe675350001dd",
+          "parentUid" : "7e194912adb251fd59a322cf8fd4885e",
+          "status" : "passed",
+          "time" : {
+            "start" : 1738779228216,
+            "stop" : 1738779228870,
+            "duration" : 654
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "closeIssue",
+          "uid" : "edeb4ae7b83c0372",
+          "parentUid" : "7e194912adb251fd59a322cf8fd4885e",
+          "status" : "passed",
+          "time" : {
+            "start" : 1738779228873,
+            "stop" : 1738779229668,
+            "duration" : 795
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "7e194912adb251fd59a322cf8fd4885e"
+      } ],
+      "uid" : "65db5d02435f9a1c6a8501e5f9ebc490"
+    } ],
+    "uid" : "5737e208fb2cf3c92feecb02653d5832"
+  } ]
+}

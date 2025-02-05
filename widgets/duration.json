@@ -1,0 +1,111 @@
+[ {
+  "uid" : "edeb4ae7b83c0372",
+  "name" : "closeIssue",
+  "time" : {
+    "start" : 1738779228873,
+    "stop" : 1738779229668,
+    "duration" : 795
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "862c3127d02066cb",
+  "name" : "testClosePullRequest",
+  "time" : {
+    "start" : 1738779230255,
+    "stop" : 1738779232815,
+    "duration" : 2560
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "5f624aea82981730",
+  "name" : "createAndDeleteIssue",
+  "time" : {
+    "start" : 1738779226846,
+    "stop" : 1738779227390,
+    "duration" : 544
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "f60231f65132a0fc",
+  "name" : "testCreatePullRequest",
+  "time" : {
+    "start" : 1738779226191,
+    "stop" : 1738779228475,
+    "duration" : 2284
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "2dbe675350001dd",
+  "name" : "editIssue",
+  "time" : {
+    "start" : 1738779228216,
+    "stop" : 1738779228870,
+    "duration" : 654
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "58712c4ace824087",
+  "name" : "testMergePullRequest",
+  "time" : {
+    "start" : 1738779228478,
+    "stop" : 1738779230253,
+    "duration" : 1775
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "2fcd162d323894ae",
+  "name" : "unsuccessfullLoginWithInvalidToken",
+  "time" : {
+    "start" : 1738779225971,
+    "stop" : 1738779226186,
+    "duration" : 215
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "587dfbccf9e7a05",
+  "name" : "cloneRepository",
+  "time" : {
+    "start" : 1738779227394,
+    "stop" : 1738779227722,
+    "duration" : 328
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "a731d80709e5b5da",
+  "name" : "successfullLogin",
+  "time" : {
+    "start" : 1738779225638,
+    "stop" : 1738779225931,
+    "duration" : 293
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "64dcb257499292e5",
+  "name" : "deleteRepository",
+  "time" : {
+    "start" : 1738779227725,
+    "stop" : 1738779228213,
+    "duration" : 488
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "1e9872970457398",
+  "name" : "createRepository",
+  "time" : {
+    "start" : 1738779225637,
+    "stop" : 1738779226837,
+    "duration" : 1200
+  },
+  "status" : "passed",
+  "severity" : "critical"
+} ]
