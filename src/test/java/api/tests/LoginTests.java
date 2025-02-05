@@ -17,7 +17,7 @@ public class LoginTests extends BaseTest {
 
     @Test
     public void successfullLogin() {
-        int statusCode = this.apiClient.getLoginToGitHub(GITHUB_USER_TOKEN).execute().getStatusCode();
+        int statusCode = this.apiClient.getLoginToGitHub(USER_TOKEN).execute().getStatusCode();
         assertEquals(HttpStatus.SC_OK, statusCode);
     }
 

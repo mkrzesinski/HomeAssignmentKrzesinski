@@ -41,14 +41,14 @@ public class PullRequestTests extends BaseTest {
         updateReadmeFile(HEAD_BRANCH, INIT_REPOSITORY_NAME);
         this.gitHubPullRequest = new GitHubPullRequest(NEW_PR_TITLE, HEAD_BRANCH, BASE_BRANCH, DESCRIPTION);
         this.requestBody = objectMapper.writeValueAsString(this.gitHubPullRequest);
-        Response response = apiClient.createNewPullRequest(GITHUB_USER_TOKEN, this.requestBody, GITHUB_USER_NAME, INIT_REPOSITORY_NAME).execute();
+        Response response = apiClient.createNewPullRequest(USER_TOKEN, this.requestBody, USER_NAME, INIT_REPOSITORY_NAME).execute();
         this.pullRequestId = response.jsonPath().getInt("number");
         assertEquals(HttpStatus.SC_CREATED, response.getStatusCode());
     }
 
     @Test(priority = 2, dependsOnMethods = "testCreatePullRequest")
     public void testMergePullRequest() {
-        Response response = this.apiClient.mergePullRequest(GITHUB_USER_TOKEN, GITHUB_USER_NAME, INIT_REPOSITORY_NAME, this.pullRequestId).execute();
+        Response response = this.apiClient.mergePullRequest(USER_TOKEN, USER_NAME, INIT_REPOSITORY_NAME, this.pullRequestId).execute();
         assertEquals(HttpStatus.SC_OK, response.getStatusCode());
         assertEquals("Pull Request successfully merged", response.jsonPath().getString("message"));
     }
@@ -59,17 +59,17 @@ public class PullRequestTests extends BaseTest {
         updateReadmeFile(HEAD_BRANCH, INIT_REPOSITORY_NAME);
         this.gitHubPullRequest = new GitHubPullRequest(NEW_PR_TITLE, HEAD_BRANCH, BASE_BRANCH, DESCRIPTION);
         this.requestBody = objectMapper.writeValueAsString(this.gitHubPullRequest);
-        response = apiClient.createNewPullRequest(GITHUB_USER_TOKEN, this.requestBody, GITHUB_USER_NAME, INIT_REPOSITORY_NAME).execute();
+        response = apiClient.createNewPullRequest(USER_TOKEN, this.requestBody, USER_NAME, INIT_REPOSITORY_NAME).execute();
         this.pullRequestId = response.jsonPath().getInt("number");
 
         String requestBody = "{\"state\": \"closed\"}";
-        response = this.apiClient.closePullRequest(GITHUB_USER_TOKEN, requestBody, GITHUB_USER_NAME, INIT_REPOSITORY_NAME, this.pullRequestId).execute();
+        response = this.apiClient.closePullRequest(USER_TOKEN, requestBody, USER_NAME, INIT_REPOSITORY_NAME, this.pullRequestId).execute();
         assertEquals(HttpStatus.SC_OK, response.getStatusCode());
         assertEquals("closed", response.jsonPath().getString("state"));
     }
 
     private Map<String, Object> prepareReadmeUpdateBody(String branch) {
-        Response response = apiClient.getFileSha(GITHUB_USER_TOKEN, GITHUB_USER_NAME, INIT_REPOSITORY_NAME, README_FILE_PATH).execute();
+        Response response = apiClient.getFileSha(USER_TOKEN, USER_NAME, INIT_REPOSITORY_NAME, README_FILE_PATH).execute();
         String fileSha = response.jsonPath().getString("sha");
         String encodedContent = Base64.encodeBase64String(README_FILE_NEW_CONTENT.getBytes(StandardCharsets.UTF_8));
 
@@ -84,7 +84,7 @@ public class PullRequestTests extends BaseTest {
     }
 
     private void updateReadmeFile(String branch, String repository) throws JsonProcessingException {
-        Response response = apiClient.updateFile(GITHUB_USER_TOKEN, objectMapper.writeValueAsString(prepareReadmeUpdateBody(branch)), GITHUB_USER_NAME, repository, README_FILE_PATH).execute();
+        Response response = apiClient.updateFile(USER_TOKEN, objectMapper.writeValueAsString(prepareReadmeUpdateBody(branch)), USER_NAME, repository, README_FILE_PATH).execute();
     }
 }
 

@@ -21,20 +21,20 @@ public class RepositoryTests extends BaseTest {
     public void createRepository() throws JsonProcessingException {
         GitHubRepository gitHubRepository = new GitHubRepository(REPOSITORY_NAME, REPOSITORY_DESCRIPTION, true, true);
         String requestBody = objectMapper.writeValueAsString(gitHubRepository);
-        Response response = this.apiClient.createNewRepository(GITHUB_USER_TOKEN, requestBody).execute();
+        Response response = this.apiClient.createNewRepository(USER_TOKEN, requestBody).execute();
         assertEquals(HttpStatus.SC_CREATED, response.getStatusCode());
     }
 
     @Test(priority = 2, dependsOnMethods = "createRepository")
     public void cloneRepository() {
-        Response response = this.apiClient.cloneRepository(GITHUB_USER_TOKEN, GITHUB_USER_NAME, INIT_REPOSITORY_NAME).execute();
+        Response response = this.apiClient.cloneRepository(USER_TOKEN, USER_NAME, INIT_REPOSITORY_NAME).execute();
         assertEquals(INIT_REPOSITORY_NAME, response.jsonPath().getString("name"));
         assertTrue(response.jsonPath().getBoolean("private"));
     }
 
     @Test(priority = 3, dependsOnMethods = "createRepository")
     public void deleteRepository() {
-        Response response = this.apiClient.deleteRepository(GITHUB_USER_TOKEN, GITHUB_USER_NAME, REPOSITORY_NAME).execute();
+        Response response = this.apiClient.deleteRepository(USER_TOKEN, USER_NAME, REPOSITORY_NAME).execute();
         assertEquals(HttpStatus.SC_NO_CONTENT, response.getStatusCode());
     }
 }

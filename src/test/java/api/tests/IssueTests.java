@@ -32,7 +32,7 @@ public class IssueTests extends BaseTest {
     public void createAndDeleteIssue() throws JsonProcessingException {
         this.gitHubIssue = new GitHubIssue(ISSUE_TITLE, ISSUE_BODY, ISSUE_STATE_OPEN);
         this.requestBody = objectMapper.writeValueAsString(gitHubIssue);
-        Response response = this.apiClient.addNewIssue(GITHUB_USER_TOKEN, this.requestBody, GITHUB_USER_NAME, INIT_REPOSITORY_NAME).execute();
+        Response response = this.apiClient.addNewIssue(USER_TOKEN, this.requestBody, USER_NAME, INIT_REPOSITORY_NAME).execute();
         assertEquals(HttpStatus.SC_CREATED, response.getStatusCode());
         this.issueId = response.jsonPath().getInt("number");
     }
@@ -41,7 +41,7 @@ public class IssueTests extends BaseTest {
     public void editIssue() throws JsonProcessingException {
         this.gitHubIssue = new GitHubIssue(EDITED_ISSUE_TITLE, EDITED_ISSUE_BODY, ISSUE_STATE_OPEN);
         this.requestBody = objectMapper.writeValueAsString(gitHubIssue);
-        Response response = this.apiClient.editIssue(GITHUB_USER_TOKEN, this.requestBody, GITHUB_USER_NAME, INIT_REPOSITORY_NAME, this.issueId).execute();
+        Response response = this.apiClient.editIssue(USER_TOKEN, this.requestBody, USER_NAME, INIT_REPOSITORY_NAME, this.issueId).execute();
         assertEquals(HttpStatus.SC_OK, response.getStatusCode());
         assertEquals(EDITED_ISSUE_TITLE, response.jsonPath().getString("title"));
         assertEquals(ISSUE_STATE_OPEN, response.jsonPath().getString("state"));
@@ -51,7 +51,7 @@ public class IssueTests extends BaseTest {
     public void closeIssue() throws JsonProcessingException {
         this.gitHubIssue = new GitHubIssue(EDITED_ISSUE_TITLE, EDITED_ISSUE_BODY, ISSUE_STATE_CLOSED);
         this.requestBody = objectMapper.writeValueAsString(gitHubIssue);
-        Response response = this.apiClient.editIssue(GITHUB_USER_TOKEN, this.requestBody, GITHUB_USER_NAME, INIT_REPOSITORY_NAME, this.issueId).execute();
+        Response response = this.apiClient.editIssue(USER_TOKEN, this.requestBody, USER_NAME, INIT_REPOSITORY_NAME, this.issueId).execute();
         assertEquals(HttpStatus.SC_OK, response.getStatusCode());
         assertEquals(EDITED_ISSUE_TITLE, response.jsonPath().getString("title"));
         assertEquals(ISSUE_STATE_CLOSED, response.jsonPath().getString("state"));

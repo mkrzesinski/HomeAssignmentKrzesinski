@@ -32,8 +32,8 @@ jobs:
 
       - name: Set up Secrets
         run: |
-          echo "GITHUB_USER_TOKEN=${{ secrets.GITHUB_USER_TOKEN }}" >> $GITHUB_ENV
-          echo "GITHUB_USER_NAME=${{ secrets.GITHUB_USER_NAME }}" >> $GITHUB_ENV
+          echo "USER_TOKEN=${{ secrets.USER_TOKEN }}" >> $GITHUB_ENV
+          echo "USER_NAME=${{ secrets.USER_NAME }}" >> $GITHUB_ENV
 
       - name: Run tests
         run: mvn clean test

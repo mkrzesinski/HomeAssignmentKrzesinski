@@ -22,8 +22,8 @@ import static org.testng.AssertJUnit.assertEquals;
 
 public class BaseTest {
 
-    protected static final String GITHUB_USER_NAME = System.getenv("USER_NAME");
-    protected static final String GITHUB_USER_TOKEN = System.getenv("USER_TOKEN");
+    protected static final String USER_NAME = System.getenv("USER_NAME");
+    protected static final String USER_TOKEN = System.getenv("USER_TOKEN");
     protected static final String INIT_REPOSITORY_NAME = "InitRepository";
     protected static final String REPOSITORY_NAME = "TestRespositoryforMVPchecks";
     protected static final String REPOSITORY_DESCRIPTION = "description";
@@ -58,7 +58,7 @@ public class BaseTest {
 
     protected void createBranch(String repositoryName, String newBranchName) throws JsonProcessingException {
         String baseBranchSha = this.apiClient
-                .getBaseBranchSha(GITHUB_USER_TOKEN, GITHUB_USER_NAME, INIT_REPOSITORY_NAME, BASE_BRANCH)
+                .getBaseBranchSha(USER_TOKEN, USER_NAME, INIT_REPOSITORY_NAME, BASE_BRANCH)
                 .execute()
                 .jsonPath().getString("object.sha");
 
@@ -66,25 +66,25 @@ public class BaseTest {
         requestBody.put("ref", "refs/heads/" + newBranchName);
         requestBody.put("sha", baseBranchSha);
 
-        Response response = this.apiClient.createNewBranch(GITHUB_USER_TOKEN, objectMapper.writeValueAsString(requestBody), GITHUB_USER_NAME, repositoryName).execute();
+        Response response = this.apiClient.createNewBranch(USER_TOKEN, objectMapper.writeValueAsString(requestBody), USER_NAME, repositoryName).execute();
         assertEquals(HttpStatus.SC_CREATED, response.getStatusCode());
     }
 
     private void checkSecrets() {
-        if (GITHUB_USER_NAME == null) {
+        if (USER_NAME == null) {
             throw new RuntimeException("User name secret is not populated");
-        } else if (GITHUB_USER_TOKEN == null) {
+        } else if (USER_TOKEN == null) {
             throw new RuntimeException("User token secret is not populated");
         }
     }
 
     private void setUpTestRepository() throws JsonProcessingException {
-        if (this.apiClient.checkIfRepositoryExists(GITHUB_USER_TOKEN, GITHUB_USER_NAME, INIT_REPOSITORY_NAME).execute().getStatusCode() == HttpStatus.SC_NOT_FOUND) {
+        if (this.apiClient.checkIfRepositoryExists(USER_TOKEN, USER_NAME, INIT_REPOSITORY_NAME).execute().getStatusCode() == HttpStatus.SC_NOT_FOUND) {
             GitHubRepository gitHubRepository = new GitHubRepository(INIT_REPOSITORY_NAME, REPOSITORY_DESCRIPTION, true, true);
             String requestBody = objectMapper.writeValueAsString(gitHubRepository);
-            this.apiClient.createNewRepository(GITHUB_USER_TOKEN, requestBody).execute();
+            this.apiClient.createNewRepository(USER_TOKEN, requestBody).execute();
         }
-        if (this.apiClient.checkIfBranchExists(GITHUB_USER_TOKEN, GITHUB_USER_NAME, INIT_REPOSITORY_NAME, HEAD_BRANCH).execute().getStatusCode() == HttpStatus.SC_NOT_FOUND) {
+        if (this.apiClient.checkIfBranchExists(USER_TOKEN, USER_NAME, INIT_REPOSITORY_NAME, HEAD_BRANCH).execute().getStatusCode() == HttpStatus.SC_NOT_FOUND) {
             createBranch(INIT_REPOSITORY_NAME, HEAD_BRANCH);
         }
     }
