@@ -1,6 +1,15 @@
 # Home Assignement, Mend.io, Maciej Krzesiński
 
-## General description
+#### Table of Contents
+- [General description](#gendescr)
+- [Test Framework](#testframework)
+  - [Description](#descr)
+  - [Tech stack](#techstack)
+  - [How to run](#howtorun)
+  - [Test domain](#testdomain)
+  - [Test scenarios](#testscenarios)
+
+## General description <a id="gendescr"></a>
 
 This repository is an implementation of an assignment described in file 'Automation and Quality Home Assignement':
 
@@ -27,68 +36,115 @@ Please create and share a github repository with your assignment solution in the
 solution add a readme file describing how can we use the project in order to verify
 working
 
-## Test Plan
+## Test framework <a id="testframework"></a>
 
-### 1. Description
+### 1. Description <a id="descr"></a>
 Purpose of provided tests is to provide basic picture of MVP capabilities for Github service.<br>
 To achieve this goal test plan focuses on sanity tests for basic Github functionalities, implements high priority test cases.<br>
 Implementation is scalable and allows user to extend tests scope for further initiatives like extended sanity, smoke and regression.
 
-### 2. Tech stack
+### 2. Tech stack <a id="techstack"></a>
 **Language:** Java 17,<br>
+**Project build:** Maven,<br>
 **Testing Framework:** TestNG,<br>
-**Testing domains:** UI, API, possible hybrid model,<br>
+**Testing domains:** API, (implemented example of UI tests as well),<br>
 **Test execution by:** dedicated xml runners, test classes, test methods,<br>
 **Automation Framework:** Selenium for UI testing, REST Assured for API testing,<br>
 **Concurrency:** provided by TestNG,<br>
-**Reporting:** Allure,<br>
+**Reporting:** Allure, integrated also with GitHub actions<br>
 **Logging:** Log4j,<br>
 **CI/CD:** Github Actions - to run tests automatically when commit to main branch,<br>
+**Concurency:** Provided with TestNG by configuring xml runner.
 
-### 3. Test data
-> TODO
+### 3. How to run <a id="howtorun"></a>
 
-### 4. Configuration
-> TODO 
+**Note: Secrets needed to execute tests are not kept in the repository. They are provided by Github.
+You can find them under link:** 
 
-### 5. Test scenarios
+> https://github.com/mkrzesinski/HomeAssignmentKrzesinski/settings/secrets/actions
 
-Test scenarios focus on following Github MVP functionalities.
+<br>
+
+#### 1. Run by Github Actions 
+Repository has configured CI aspect using Github actions. Trigger for test run is push to master branch.
+Beside of that you can re run last workflow run for master branch so this will trigger new tests run.<br>
+GitHub actions for this repository can be reached here:
+> https://github.com/mkrzesinski/HomeAssignmentKrzesinski/actions
+
+Github actions and repository are also integrated with allure reporting plugin, so for each run via GitHub you can analize test result on dedicated page:
+>https://mkrzesinski.github.io/HomeAssignmentKrzesinski/
+
+<br>
+
+#### 2. Run directly in Intellij
+>**IMPORTNANT**
+> - if you want to run tests via Intellij don't forget to copy secrets from GitHub and edit run configuration by adding environment variables.
+> - local run also provides allure reports by populating `allure-results` folder, but as a user you need to install `Allure CLI` to use command `allure serve` in terminal.
+
+**- General runner for all tests is TestNG framework is xml file**
+
+> src/test/resources/runners/**githubmvptests.xml**
+
+XML runner defines scope of run and rules of concurency. In current configuration it provides concurency on class level with factor 2.
+To test right click on xml file -> Run.
+
+**- Run particular test class, test method**
+
+Test cases are able to be run separately so there is also possibility to run separate class or test method.
+
+**- Run in terminal using `mvn clean test`**
+
+### 4. Test domain <a id="testdomain"></a>
+
+All implemented tests are API tests using REST assured library. GitHub service provides an api to easily conduct all needed operations.
+Proposed framework should be easy to extend by adding next test in API or UI domain.<br>
+There is also a possibility to create hybrid form of tests using both API and UI code.<br>
+
+Github blocks all activities identified as a automation scripts executed by browsers.
+Because of this UI aspect is created only in initial form to show potential Selenium framework shape.
+None of existing UI test are included into proposed MVP test suite.
+
+### 5. Test scenarios <a id="testscenarios"></a>
+
+**Test scenarios focus on following Github MVP functionalities.**
 
 - Logging, authentication,
 - Repository workflow,
 - Issue workflow,
 - Pull Requests workflow.
 
-Predicates:
-- **User credentials:** stored in _test.properties_ file,
-- **Repository data:** stored in _test.properties_ file,
+**Predicates:**
+- **User credentials:** stored in GitHub
+- **Repository data:** stored in GitHub
 
-#### Logging, authentication
+**Expected results, validations:**
+- based on checking for proper response, i.e. response codes.
 
-| Scenario name                       | Description                                          | Domain  | Test Data                                 | Test steps                                                                                    | Expected Results                                                                                                                           |
-|-------------------------------------|------------------------------------------------------|---------|-------------------------------------------|-----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| SignIn with incorrect credentials   | Logging to existing account with user name           | UI      | User credentials,<br>incorrect username.  | 1. Open github.com,<br>2. Fill username and passwords fields,<br>3. Click Sign In button.     | 1. User should NOT be able to signin with given credentials,<br>2. Propper error message should appear: 'Incorrect user name or password'. |
-| SignIn with correct passkey         | Successful authentication via API                    | API     | TODO                                      | TODO                                                                                          | TODO                                                                                                                                       |
-| SignIn with incorrect passkey       | Unsuccessful authentication via API                  | API     | TODO                                      | TODO                                                                                          | TODO                                                                                                                                       |
+<br>
 
-#### Repository workflow,
+#### GitHub MVP capabilities and test scenarios:
 
-| Scenario name       | Description               | Domain | Test Data                                  | Test steps                                    | Expected Results                                                                                     |
-|---------------------|---------------------------|--------|--------------------------------------------|-----------------------------------------------|------------------------------------------------------------------------------------------------------|
-| Repository creation | Empty repository creation | UI     | Empty repository data                      | 1. SignIn,<br>2. Create empty repository,<br> | 1. User should be able to create repository, proper data is displayed on created repository page     |
-| Repository clone    | Empty repository clone    | UI     | Empty repository data, with existing name. | 1. SignIn,<br>2. Create empty repository,<br> | 1. User should NOT be able to create repository with existing name, proper popup should be displayed |
-| Repository delete   | Empty repository delete   | UI     | Empty repository data, with existing name. | 1. SignIn,<br>2. Create empty repository,<br> | 1. User should NOT be able to create repository with existing name, proper popup should be displayed |
-| Repository creation | Empty repository creation | API    | TODO                                       | TODO                                          | TODO                                                                                                 |
+#### **Logging, authentication**
+
+- Successful login with proper credentials,
+- Unsuccessful login with wrong token,
+
+#### **Repository workflow**,
+
+- Create repository,
+- Delete repository,
+- Clone repository,
 
 
 #### Issue Workflow,
 
-> TODO
+- Create issue,
+- Close issue,
+- Edit issue,
+- Delete issue,
 
 #### Pull Requests workflow,
 
-> TODO
-
-### 6. How to run
-> TODO
+- Create PR,
+- Merge PR,
+- Close PR.

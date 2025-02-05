@@ -37,7 +37,7 @@ public class PullRequestTests extends BaseTest {
 
 
     @Test(priority = 1)
-    public void testCreatePullRequest() throws JsonProcessingException {
+    public void createPullRequest() throws JsonProcessingException {
         updateReadmeFile(HEAD_BRANCH, INIT_REPOSITORY_NAME);
         this.gitHubPullRequest = new GitHubPullRequest(NEW_PR_TITLE, HEAD_BRANCH, BASE_BRANCH, DESCRIPTION);
         this.requestBody = objectMapper.writeValueAsString(this.gitHubPullRequest);
@@ -46,15 +46,15 @@ public class PullRequestTests extends BaseTest {
         assertEquals(HttpStatus.SC_CREATED, response.getStatusCode());
     }
 
-    @Test(priority = 2, dependsOnMethods = "testCreatePullRequest")
-    public void testMergePullRequest() {
+    @Test(priority = 2, dependsOnMethods = "createPullRequest")
+    public void mergePullRequest() {
         Response response = this.apiClient.mergePullRequest(USER_TOKEN, USER_NAME, INIT_REPOSITORY_NAME, this.pullRequestId).execute();
         assertEquals(HttpStatus.SC_OK, response.getStatusCode());
         assertEquals("Pull Request successfully merged", response.jsonPath().getString("message"));
     }
 
-    @Test(priority = 3, dependsOnMethods = "testMergePullRequest")
-    public void testClosePullRequest() throws JsonProcessingException {
+    @Test(priority = 3, dependsOnMethods = "mergePullRequest")
+    public void closePullRequest() throws JsonProcessingException {
         Response response;
         updateReadmeFile(HEAD_BRANCH, INIT_REPOSITORY_NAME);
         this.gitHubPullRequest = new GitHubPullRequest(NEW_PR_TITLE, HEAD_BRANCH, BASE_BRANCH, DESCRIPTION);
