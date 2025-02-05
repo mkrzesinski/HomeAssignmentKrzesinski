@@ -13,11 +13,9 @@ import org.testng.annotations.Test;
 import static org.testng.AssertJUnit.assertEquals;
 import static org.testng.AssertJUnit.assertTrue;
 
-
 @Feature("GitHub MVP tests - Repository")
 @Severity(SeverityLevel.CRITICAL)
 public class RepositoryTests extends BaseTest {
-
 
     @Test(priority = 1)
     public void createRepository() throws JsonProcessingException {

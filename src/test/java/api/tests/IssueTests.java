@@ -11,8 +11,6 @@ import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
 import org.testng.annotations.Test;
 
-import java.util.UUID;
-
 import static org.testng.AssertJUnit.assertEquals;
 
 @Feature("GitHub MVP tests - Issues")

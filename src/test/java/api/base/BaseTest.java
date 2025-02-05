@@ -12,7 +12,6 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 import java.util.HashMap;
@@ -81,7 +80,7 @@ public class BaseTest {
 
     private void setUpTestRepository() throws JsonProcessingException {
         if (this.apiClient.checkIfRepositoryExists(GITHUB_USER_TOKEN, GITHUB_USER_NAME, INIT_REPOSITORY_NAME).execute().getStatusCode() == HttpStatus.SC_NOT_FOUND) {
-            GitHubRepository gitHubRepository = new GitHubRepository(INIT_REPOSITORY_NAME, REPOSITORY_DESCRIPTION, true,true);
+            GitHubRepository gitHubRepository = new GitHubRepository(INIT_REPOSITORY_NAME, REPOSITORY_DESCRIPTION, true, true);
             String requestBody = objectMapper.writeValueAsString(gitHubRepository);
             this.apiClient.createNewRepository(GITHUB_USER_TOKEN, requestBody).execute();
         }

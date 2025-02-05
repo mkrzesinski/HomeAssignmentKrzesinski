@@ -12,10 +12,12 @@ public class ApiClient {
         this.requestSpecBuilderSupplier = requestSpecBuilderSupplier;
     }
 
+    //Login
     public GetLoginToGitHub getLoginToGitHub(String token) {
         return new GetLoginToGitHub(this.requestSpecBuilderSupplier.get(), token);
     }
 
+    //Repository
     public PostNewRepository createNewRepository(String token, String requestBody) {
         return new PostNewRepository(this.requestSpecBuilderSupplier.get(), token, requestBody);
     }
@@ -28,6 +30,11 @@ public class ApiClient {
         return new CloneRepository(this.requestSpecBuilderSupplier.get(), token, userName, repositoryName);
     }
 
+    public GetCheckIfRepositoryExists checkIfRepositoryExists(String token, String userName, String repositoryName) {
+        return new GetCheckIfRepositoryExists(this.requestSpecBuilderSupplier.get(), token, userName, repositoryName);
+    }
+
+    //Issue
     public PostNewIssue addNewIssue(String token, String requestBody, String userName, String repositoryName) {
         return new PostNewIssue(this.requestSpecBuilderSupplier.get(), token, requestBody, userName, repositoryName);
     }
@@ -36,6 +43,7 @@ public class ApiClient {
         return new PatchIssue(this.requestSpecBuilderSupplier.get(), token, requestBody, userName, repositoryName, issueId);
     }
 
+    //PullRequest
     public PostPullRequest createNewPullRequest(String token, String requestBody, String userName, String repositoryName) {
         return new PostPullRequest(this.requestSpecBuilderSupplier.get(), token, requestBody, userName, repositoryName);
     }
@@ -48,6 +56,20 @@ public class ApiClient {
         return new PatchClosePullRequest(this.requestSpecBuilderSupplier.get(), token, requestBody, userName, repositoryName, pullRequestId);
     }
 
+    //Branch
+    public PostCreateNewBranch createNewBranch(String token, String requestBody, String userName, String repositoryName) {
+        return new PostCreateNewBranch(this.requestSpecBuilderSupplier.get(), token, requestBody, userName, repositoryName);
+    }
+
+    public GetCheckIfBranchExists checkIfBranchExists(String token, String userName, String repositoryName, String branchName) {
+        return new GetCheckIfBranchExists(this.requestSpecBuilderSupplier.get(), token, userName, repositoryName, branchName);
+    }
+
+    public GetBranchSha getBaseBranchSha(String token, String userName, String repositoryName, String branchName) {
+        return new GetBranchSha(this.requestSpecBuilderSupplier.get(), token, userName, repositoryName, branchName);
+    }
+
+    //Other
     public GetFileSha getFileSha(String token, String userName, String repositoryName, String filePath) {
         return new GetFileSha(this.requestSpecBuilderSupplier.get(), token, userName, repositoryName, filePath);
     }
@@ -56,19 +78,5 @@ public class ApiClient {
         return new PutUpdateFile(this.requestSpecBuilderSupplier.get(), token, requestBody, userName, repositoryName, filePath);
     }
 
-    public PostCreateNewBranch createNewBranch(String token, String requestBody, String userName, String repositoryName){
-        return new PostCreateNewBranch(this.requestSpecBuilderSupplier.get(), token, requestBody, userName, repositoryName);
-    }
 
-    public GetCheckIfRepositoryExists checkIfRepositoryExists(String token, String userName, String repositoryName){
-        return new GetCheckIfRepositoryExists(this.requestSpecBuilderSupplier.get(), token, userName,repositoryName);
-    }
-
-    public GetCheckIfBranchExists checkIfBranchExists(String token, String userName, String repositoryName, String branchName){
-        return new GetCheckIfBranchExists(this.requestSpecBuilderSupplier.get(), token, userName,repositoryName, branchName);
-    }
-
-    public GetBranchSha getBaseBranchSha(String token, String userName, String repositoryName, String branchName){
-        return new GetBranchSha(this.requestSpecBuilderSupplier.get(), token, userName,repositoryName, branchName);
-    }
 }

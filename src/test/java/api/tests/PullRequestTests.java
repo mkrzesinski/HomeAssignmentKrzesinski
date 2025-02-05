@@ -2,7 +2,6 @@ package api.tests;
 
 import api.base.BaseTest;
 import api.models.GitHubPullRequest;
-import api.models.GitHubRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.qameta.allure.Feature;
@@ -11,8 +10,6 @@ import io.qameta.allure.SeverityLevel;
 import io.restassured.response.Response;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.http.HttpStatus;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.nio.charset.StandardCharsets;
@@ -88,10 +85,6 @@ public class PullRequestTests extends BaseTest {
 
     private void updateReadmeFile(String branch, String repository) throws JsonProcessingException {
         Response response = apiClient.updateFile(GITHUB_USER_TOKEN, objectMapper.writeValueAsString(prepareReadmeUpdateBody(branch)), GITHUB_USER_NAME, repository, README_FILE_PATH).execute();
-    }
-
-    private void checkIgBranchExists() {
-
     }
 }
 
