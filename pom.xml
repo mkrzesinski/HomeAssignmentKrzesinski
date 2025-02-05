@@ -28,6 +28,7 @@
         <assertj-core.version>3.27.3</assertj-core.version>
         <surefire-testng.version>3.5.2</surefire-testng.version>
         <maven-surefire-plugin.version>3.0.0-M7</maven-surefire-plugin.version>
+        <allure-maven.version>2.11.2</allure-maven.version>
     </properties>
 
     <dependencies>
@@ -124,6 +125,9 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>src/test/resources/runners/githubmvptests.xml</suiteXmlFile>
                     </suiteXmlFiles>
+                    <systemPropertyVariables>
+                        <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
+                    </systemPropertyVariables>
                 </configuration>
                 <dependencies>
                     <dependency>
@@ -132,6 +136,19 @@
                         <version>${surefire-testng.version}</version>
                     </dependency>
                 </dependencies>
+            </plugin>
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>${allure-maven.version}</version>
+                <executions>
+                    <execution>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

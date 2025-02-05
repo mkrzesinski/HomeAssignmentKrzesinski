@@ -1,10 +1,6 @@
 package ui.tests;
 
-import config.ConfigProvider;
 import config.SeleniumBase;
-import io.qameta.allure.Feature;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
 import lombok.Getter;
 import lombok.SneakyThrows;
 import org.testng.annotations.Test;
@@ -14,8 +10,6 @@ import ui.pages.LoginPage;
 import static org.testng.Assert.assertTrue;
 
 @Getter
-@Feature("GitHub MVP - Logging")
-@Severity(SeverityLevel.CRITICAL)
 public class LoginTests extends SeleniumBase {
 
     private GitHubMainPage GitHubMainPage;
@@ -23,7 +17,7 @@ public class LoginTests extends SeleniumBase {
 
     @SneakyThrows
     @Test()
-    public void shouldNotBeAbleToLoginWithInvalidUserName(){
+    public void shouldNotBeAbleToLoginWithInvalidUserName() {
         navigateToMainPage();
         this.GitHubMainPage = new GitHubMainPage(this.webDriver);
         GitHubMainPage.selectSignInOption();
@@ -36,7 +30,7 @@ public class LoginTests extends SeleniumBase {
 
     @SneakyThrows
     @Test
-    public void shouldNotBeAbleToLoginWithInvalidPassword(){
+    public void shouldNotBeAbleToLoginWithInvalidPassword() {
         navigateToMainPage();
         this.GitHubMainPage = new GitHubMainPage(this.webDriver);
         GitHubMainPage.selectSignInOption();
@@ -47,7 +41,7 @@ public class LoginTests extends SeleniumBase {
         loginPage.refreshPage(this.javascriptExecutor);
     }
 
-    private void verifyIncorrectLoginDataResults(){
+    private void verifyIncorrectLoginDataResults() {
         loginPage.waitForPageToLoad(loginPage.getIncorrectLoginDataLabel());
         assertTrue(loginPage.getIncorrectLoginDataLabel().getText().contains("Incorrect username or password."));
         loginPage.clickElement(loginPage.getCancelAlertButton());

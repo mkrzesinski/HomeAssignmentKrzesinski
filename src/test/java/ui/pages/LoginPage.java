@@ -1,6 +1,5 @@
 package ui.pages;
 
-import config.ConfigProvider;
 import lombok.Getter;
 import lombok.SneakyThrows;
 import org.openqa.selenium.JavascriptExecutor;
@@ -31,7 +30,7 @@ public class LoginPage extends AbstractPage {
     @FindBy(name = SIGN_IN_BUTTON)
     WebElement signInButton;
 
-    @FindBy(className=INCORECT_LOGIN_DATA_LABEL)
+    @FindBy(className = INCORECT_LOGIN_DATA_LABEL)
     WebElement incorrectLoginDataLabel;
 
     @FindBy(xpath = CANCEL_ALERT_BUTTON)
@@ -53,7 +52,7 @@ public class LoginPage extends AbstractPage {
         javascriptExecutor.executeScript("arguments[0].value=arguments[1];", passwordField, System.getenv("GITHUB_USER_PASSWORD"));
     }
 
-    public void fillCredencialsWithGivenData(@org.jetbrains.annotations.NotNull JavascriptExecutor javascriptExecutor, final String userName, final String password){
+    public void fillCredencialsWithGivenData(@org.jetbrains.annotations.NotNull JavascriptExecutor javascriptExecutor, final String userName, final String password) {
         javascriptExecutor.executeScript("arguments[0].value=arguments[1];", userNameField, userName);
         javascriptExecutor.executeScript("arguments[0].value=arguments[1];", passwordField, password);
     }

@@ -15,7 +15,6 @@ import static org.awaitility.Awaitility.await;
 public abstract class AbstractPage {
     protected WebDriver webDriver;
     protected WebDriverWait webDriverWait;
-    protected JavascriptExecutor javascriptExecutor;
 
     public AbstractPage(WebDriver webDriver) {
         this.webDriver = webDriver;

@@ -37,7 +37,6 @@ public class HomePage extends AbstractPage {
     @FindBy(xpath = CONFIRM_SIGN_OUT_BUTTON)
     WebElement confirmSignOutButton;
 
-
     public HomePage(WebDriver webDriver) {
         super(webDriver);
         super.waitForPageToLoad(createRepositoryButton);
