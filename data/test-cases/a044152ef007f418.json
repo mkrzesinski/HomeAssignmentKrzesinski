@@ -1,12 +1,12 @@
 {
-  "uid" : "3c2e0514965bf2f0",
-  "name" : "cloneRepository",
-  "fullName" : "api.tests.RepositoryTests.cloneRepository",
-  "historyId" : "3b788fb3926a9b7793dcc46c642b7666",
+  "uid" : "a044152ef007f418",
+  "name" : "deleteRepository",
+  "fullName" : "api.tests.RepositoryTests.deleteRepository",
+  "historyId" : "46581f93babdae9313226e292c5da4f2",
   "time" : {
-    "start" : 1738792212081,
-    "stop" : 1738792212404,
-    "duration" : 323
+    "start" : 1738792336461,
+    "stop" : 1738792336933,
+    "duration" : 472
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,8 +14,8 @@
   "beforeStages" : [ {
     "name" : "setUpClient",
     "time" : {
-      "start" : 1738792210039,
-      "stop" : 1738792210039,
+      "start" : 1738792334584,
+      "stop" : 1738792334584,
       "duration" : 0
     },
     "description" : "",
@@ -30,9 +30,9 @@
   }, {
     "name" : "setUp",
     "time" : {
-      "start" : 1738792208193,
-      "stop" : 1738792210015,
-      "duration" : 1822
+      "start" : 1738792332610,
+      "stop" : 1738792334560,
+      "duration" : 1950
     },
     "description" : "",
     "status" : "passed",
@@ -53,7 +53,7 @@
     "value" : "api.tests.RepositoryTests"
   }, {
     "name" : "testMethod",
-    "value" : "cloneRepository"
+    "value" : "deleteRepository"
   }, {
     "name" : "parentSuite",
     "value" : "GitHub MVP test suit"
@@ -65,10 +65,10 @@
     "value" : "api.tests.RepositoryTests"
   }, {
     "name" : "host",
-    "value" : "fv-az1278-617"
+    "value" : "fv-az2020-106"
   }, {
     "name" : "thread",
-    "value" : "1911@fv-az1278-617.TestNG-test-GitHub API MVP Tests-2(22)"
+    "value" : "1913@fv-az2020-106.TestNG-test-GitHub API MVP Tests-2(22)"
   }, {
     "name" : "framework",
     "value" : "testng"
@@ -95,6 +95,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "3c2e0514965bf2f0.json",
+  "source" : "a044152ef007f418.json",
   "parameterValues" : [ ]
 }

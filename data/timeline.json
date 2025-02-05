@@ -2,159 +2,159 @@
   "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
   "name" : "timeline",
   "children" : [ {
-    "name" : "fv-az1278-617",
+    "name" : "fv-az2020-106",
     "children" : [ {
-      "name" : "1911@fv-az1278-617.TestNG-test-GitHub API MVP Tests-2(22)",
+      "name" : "1913@fv-az2020-106.TestNG-test-GitHub API MVP Tests-2(22)",
       "children" : [ {
-        "name" : "cloneRepository",
-        "uid" : "3c2e0514965bf2f0",
-        "parentUid" : "6d58148ffd63b17de917dca4b2a34264",
-        "status" : "passed",
-        "time" : {
-          "start" : 1738792212081,
-          "stop" : 1738792212404,
-          "duration" : 323
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "deleteRepository",
-        "uid" : "dee5addc18d0a49e",
-        "parentUid" : "6d58148ffd63b17de917dca4b2a34264",
-        "status" : "passed",
-        "time" : {
-          "start" : 1738792212409,
-          "stop" : 1738792212965,
-          "duration" : 556
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "createRepository",
-        "uid" : "71f81673f64b21b4",
-        "parentUid" : "6d58148ffd63b17de917dca4b2a34264",
-        "status" : "passed",
-        "time" : {
-          "start" : 1738792210075,
-          "stop" : 1738792211591,
-          "duration" : 1516
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "closeIssue",
-        "uid" : "27ada932bc8392e8",
-        "parentUid" : "6d58148ffd63b17de917dca4b2a34264",
-        "status" : "passed",
-        "time" : {
-          "start" : 1738792213719,
-          "stop" : 1738792214617,
-          "duration" : 898
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
         "name" : "createAndDeleteIssue",
-        "uid" : "747f30ee036f5a47",
-        "parentUid" : "6d58148ffd63b17de917dca4b2a34264",
+        "uid" : "b528efeee3c4dc8f",
+        "parentUid" : "333216a89f781c9a518b015b9f11dfc5",
         "status" : "passed",
         "time" : {
-          "start" : 1738792211595,
-          "stop" : 1738792212075,
-          "duration" : 480
+          "start" : 1738792335647,
+          "stop" : 1738792336094,
+          "duration" : 447
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "cloneRepository",
+        "uid" : "337a4d0aa5f2fc89",
+        "parentUid" : "333216a89f781c9a518b015b9f11dfc5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1738792336098,
+          "stop" : 1738792336458,
+          "duration" : 360
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "editIssue",
-        "uid" : "4d455704382cedec",
-        "parentUid" : "6d58148ffd63b17de917dca4b2a34264",
+        "uid" : "1d9bf2feafdfe0dc",
+        "parentUid" : "333216a89f781c9a518b015b9f11dfc5",
         "status" : "passed",
         "time" : {
-          "start" : 1738792212970,
-          "stop" : 1738792213716,
-          "duration" : 746
+          "start" : 1738792336941,
+          "stop" : 1738792337526,
+          "duration" : 585
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "deleteRepository",
+        "uid" : "a044152ef007f418",
+        "parentUid" : "333216a89f781c9a518b015b9f11dfc5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1738792336461,
+          "stop" : 1738792336933,
+          "duration" : 472
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "closeIssue",
+        "uid" : "ac66da1560fcf11b",
+        "parentUid" : "333216a89f781c9a518b015b9f11dfc5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1738792337529,
+          "stop" : 1738792338196,
+          "duration" : 667
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "createRepository",
+        "uid" : "567f5a8870396627",
+        "parentUid" : "333216a89f781c9a518b015b9f11dfc5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1738792334618,
+          "stop" : 1738792335643,
+          "duration" : 1025
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "6d58148ffd63b17de917dca4b2a34264"
+      "uid" : "333216a89f781c9a518b015b9f11dfc5"
     }, {
-      "name" : "1911@fv-az1278-617.TestNG-test-GitHub API MVP Tests-1(21)",
+      "name" : "1913@fv-az2020-106.TestNG-test-GitHub API MVP Tests-1(21)",
       "children" : [ {
         "name" : "closePullRequest",
-        "uid" : "6d1632c36061c43a",
-        "parentUid" : "3b9c596b930258da943e7e8b3c4b1a9a",
+        "uid" : "3dc9260ff5f01a3f",
+        "parentUid" : "7c4eb5827588c5b1e3dd9b5a967e8e83",
         "status" : "passed",
         "time" : {
-          "start" : 1738792214904,
-          "stop" : 1738792217606,
-          "duration" : 2702
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "successfullLogin",
-        "uid" : "1815b8509d205981",
-        "parentUid" : "3b9c596b930258da943e7e8b3c4b1a9a",
-        "status" : "passed",
-        "time" : {
-          "start" : 1738792210075,
-          "stop" : 1738792210374,
-          "duration" : 299
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "unsuccessfullLoginWithInvalidToken",
-        "uid" : "c98d80d214c1594e",
-        "parentUid" : "3b9c596b930258da943e7e8b3c4b1a9a",
-        "status" : "passed",
-        "time" : {
-          "start" : 1738792210413,
-          "stop" : 1738792210609,
-          "duration" : 196
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "createPullRequest",
-        "uid" : "43028bc34c7fc067",
-        "parentUid" : "3b9c596b930258da943e7e8b3c4b1a9a",
-        "status" : "passed",
-        "time" : {
-          "start" : 1738792210615,
-          "stop" : 1738792213152,
-          "duration" : 2537
+          "start" : 1738792338855,
+          "stop" : 1738792341325,
+          "duration" : 2470
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "mergePullRequest",
-        "uid" : "c632d0b1fe6a15ce",
-        "parentUid" : "3b9c596b930258da943e7e8b3c4b1a9a",
+        "uid" : "42fd2a0159bc05e6",
+        "parentUid" : "7c4eb5827588c5b1e3dd9b5a967e8e83",
         "status" : "passed",
         "time" : {
-          "start" : 1738792213158,
-          "stop" : 1738792214901,
-          "duration" : 1743
+          "start" : 1738792337305,
+          "stop" : 1738792338852,
+          "duration" : 1547
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "successfullLogin",
+        "uid" : "e59fa1c6b116a8e2",
+        "parentUid" : "7c4eb5827588c5b1e3dd9b5a967e8e83",
+        "status" : "passed",
+        "time" : {
+          "start" : 1738792334617,
+          "stop" : 1738792334884,
+          "duration" : 267
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "createPullRequest",
+        "uid" : "c5abc265e4ac68ea",
+        "parentUid" : "7c4eb5827588c5b1e3dd9b5a967e8e83",
+        "status" : "passed",
+        "time" : {
+          "start" : 1738792335125,
+          "stop" : 1738792337301,
+          "duration" : 2176
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "unsuccessfullLoginWithInvalidToken",
+        "uid" : "8cb2e8bcf2f7406c",
+        "parentUid" : "7c4eb5827588c5b1e3dd9b5a967e8e83",
+        "status" : "passed",
+        "time" : {
+          "start" : 1738792334923,
+          "stop" : 1738792335119,
+          "duration" : 196
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "3b9c596b930258da943e7e8b3c4b1a9a"
+      "uid" : "7c4eb5827588c5b1e3dd9b5a967e8e83"
     } ],
-    "uid" : "a2844e580337f52ea8e49c2e88f18227"
+    "uid" : "dfeb13004d854068738e95a151f94896"
   } ]
 }

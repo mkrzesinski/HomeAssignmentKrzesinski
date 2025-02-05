@@ -1,12 +1,12 @@
 {
-  "uid" : "1815b8509d205981",
-  "name" : "successfullLogin",
-  "fullName" : "api.tests.LoginTests.successfullLogin",
-  "historyId" : "1c4a61419b62472ac92a1d3d777b6b6d",
+  "uid" : "8cb2e8bcf2f7406c",
+  "name" : "unsuccessfullLoginWithInvalidToken",
+  "fullName" : "api.tests.LoginTests.unsuccessfullLoginWithInvalidToken",
+  "historyId" : "b4e5097273b211af3f61b731a21491de",
   "time" : {
-    "start" : 1738792210075,
-    "stop" : 1738792210374,
-    "duration" : 299
+    "start" : 1738792334923,
+    "stop" : 1738792335119,
+    "duration" : 196
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,8 +14,8 @@
   "beforeStages" : [ {
     "name" : "setUpClient",
     "time" : {
-      "start" : 1738792210039,
-      "stop" : 1738792210039,
+      "start" : 1738792334583,
+      "stop" : 1738792334583,
       "duration" : 0
     },
     "description" : "",
@@ -30,9 +30,9 @@
   }, {
     "name" : "setUp",
     "time" : {
-      "start" : 1738792208193,
-      "stop" : 1738792210015,
-      "duration" : 1822
+      "start" : 1738792332610,
+      "stop" : 1738792334560,
+      "duration" : 1950
     },
     "description" : "",
     "status" : "passed",
@@ -53,7 +53,7 @@
     "value" : "api.tests.LoginTests"
   }, {
     "name" : "testMethod",
-    "value" : "successfullLogin"
+    "value" : "unsuccessfullLoginWithInvalidToken"
   }, {
     "name" : "parentSuite",
     "value" : "GitHub MVP test suit"
@@ -65,10 +65,10 @@
     "value" : "api.tests.LoginTests"
   }, {
     "name" : "host",
-    "value" : "fv-az1278-617"
+    "value" : "fv-az2020-106"
   }, {
     "name" : "thread",
-    "value" : "1911@fv-az1278-617.TestNG-test-GitHub API MVP Tests-1(21)"
+    "value" : "1913@fv-az2020-106.TestNG-test-GitHub API MVP Tests-1(21)"
   }, {
     "name" : "framework",
     "value" : "testng"
@@ -95,6 +95,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "1815b8509d205981.json",
+  "source" : "8cb2e8bcf2f7406c.json",
   "parameterValues" : [ ]
 }

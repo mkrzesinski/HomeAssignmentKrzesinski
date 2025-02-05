@@ -1,12 +1,12 @@
 {
-  "uid" : "c98d80d214c1594e",
-  "name" : "unsuccessfullLoginWithInvalidToken",
-  "fullName" : "api.tests.LoginTests.unsuccessfullLoginWithInvalidToken",
-  "historyId" : "b4e5097273b211af3f61b731a21491de",
+  "uid" : "ac66da1560fcf11b",
+  "name" : "closeIssue",
+  "fullName" : "api.tests.IssueTests.closeIssue",
+  "historyId" : "61e12a4dd0b760fe9ef8f096fcf7a6fa",
   "time" : {
-    "start" : 1738792210413,
-    "stop" : 1738792210609,
-    "duration" : 196
+    "start" : 1738792337529,
+    "stop" : 1738792338196,
+    "duration" : 667
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,8 +14,8 @@
   "beforeStages" : [ {
     "name" : "setUpClient",
     "time" : {
-      "start" : 1738792210039,
-      "stop" : 1738792210039,
+      "start" : 1738792335644,
+      "stop" : 1738792335644,
       "duration" : 0
     },
     "description" : "",
@@ -30,9 +30,9 @@
   }, {
     "name" : "setUp",
     "time" : {
-      "start" : 1738792208193,
-      "stop" : 1738792210015,
-      "duration" : 1822
+      "start" : 1738792332610,
+      "stop" : 1738792334560,
+      "duration" : 1950
     },
     "description" : "",
     "status" : "passed",
@@ -47,13 +47,13 @@
   "afterStages" : [ ],
   "labels" : [ {
     "name" : "package",
-    "value" : "api.tests.LoginTests"
+    "value" : "api.tests.IssueTests"
   }, {
     "name" : "testClass",
-    "value" : "api.tests.LoginTests"
+    "value" : "api.tests.IssueTests"
   }, {
     "name" : "testMethod",
-    "value" : "unsuccessfullLoginWithInvalidToken"
+    "value" : "closeIssue"
   }, {
     "name" : "parentSuite",
     "value" : "GitHub MVP test suit"
@@ -62,13 +62,13 @@
     "value" : "GitHub API MVP Tests"
   }, {
     "name" : "subSuite",
-    "value" : "api.tests.LoginTests"
+    "value" : "api.tests.IssueTests"
   }, {
     "name" : "host",
-    "value" : "fv-az1278-617"
+    "value" : "fv-az2020-106"
   }, {
     "name" : "thread",
-    "value" : "1911@fv-az1278-617.TestNG-test-GitHub API MVP Tests-1(21)"
+    "value" : "1913@fv-az2020-106.TestNG-test-GitHub API MVP Tests-2(22)"
   }, {
     "name" : "framework",
     "value" : "testng"
@@ -77,7 +77,7 @@
     "value" : "java"
   }, {
     "name" : "feature",
-    "value" : "GitHub MVP tests - Login"
+    "value" : "GitHub MVP tests - Issues"
   }, {
     "name" : "severity",
     "value" : "critical"
@@ -95,6 +95,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "c98d80d214c1594e.json",
+  "source" : "ac66da1560fcf11b.json",
   "parameterValues" : [ ]
 }
