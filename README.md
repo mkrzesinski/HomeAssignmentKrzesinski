@@ -5,7 +5,7 @@
 - [Test Framework](#testframework)
   - [Description](#descr)
   - [Tech stack](#techstack)
-  - [How to run](#howtorun)
+  - [Test run and reporting](#howtorun)
   - [Test domain](#testdomain)
   - [Test scenarios](#testscenarios)
 
@@ -58,8 +58,7 @@ Implementation is scalable and allows user to extend tests scope for further ini
 
 ### 3. How to run <a id="howtorun"></a>
 
-**Note: Secrets needed to execute tests are not kept in the repository. They are provided by Github.<br>
-Below link may work only for repository owner.
+**Note: Secrets needed to execute tests are not kept in the repository. They are provided by Github under below link, but it may work only for repository owner.<br>
 To reach secrets please email me directly with `maciej.krzesinski@gmail.com`**
 
 
@@ -79,9 +78,9 @@ Github actions and repository are also integrated with allure reporting plugin, 
 <br>
 
 #### 2. Run directly in Intellij
->**IMPORTNANT**
-> - if you want to run tests via Intellij don't forget to copy secrets from GitHub and edit run configuration by adding environment variables.
-> - local run also provides allure reports by populating `allure-results` folder, but as a user you need to install `Allure CLI` to use command `allure serve` in terminal.
+**IMPORTNANT**
+ - if you want to run tests via Intellij don't forget to get secrets and edit run configurations by adding environment variables.
+ - local run also provides allure reports by populating `allure-results` folder, but as a user you need to install `Allure CLI` to use command `allure serve` in terminal.
 
 **- General runner for all tests is TestNG framework is xml file**
 
@@ -92,19 +91,19 @@ To test right click on xml file -> Run.
 
 **- Run particular test class, test method**
 
-Test cases are able to be run separately so there is also possibility to run separate class or test method.
+Test cases are able to be run separately so there is also possibility to run separate test class or test method.
 
 **- Run in terminal using `mvn clean test`**
 
 ### 4. Test domain <a id="testdomain"></a>
 
-All implemented tests are API tests using REST assured library. GitHub service provides an api to easily conduct all needed operations.
-Proposed framework should be easy to extend by adding next test in API or UI domain.<br>
+All implemented tests are API tests using REST Assured library. GitHub service provides an API to easily conduct all needed operations.
+Proposed framework should be easy to extend by adding next tests in API or UI domain.<br>
 There is also a possibility to create hybrid form of tests using both API and UI code.<br>
 
 Github blocks all activities identified as a automation scripts executed by browsers.
 Because of this UI aspect is created only in initial form to show potential Selenium framework shape.
-None of existing UI test are included into proposed MVP test suite.
+None of existing UI test is included into proposed MVP test suite.
 
 ### 5. Test scenarios <a id="testscenarios"></a>
 
