@@ -1,12 +1,12 @@
 {
-  "uid" : "862c3127d02066cb",
-  "name" : "testClosePullRequest",
-  "fullName" : "api.tests.PullRequestTests.testClosePullRequest",
-  "historyId" : "33c70cf061782ec8d8cf7c9f653087e",
+  "uid" : "f9cc878a5e99176f",
+  "name" : "closePullRequest",
+  "fullName" : "api.tests.PullRequestTests.closePullRequest",
+  "historyId" : "cf0510e60d3262c6d6371f0a26419272",
   "time" : {
-    "start" : 1738779230255,
-    "stop" : 1738779232815,
-    "duration" : 2560
+    "start" : 1738790285301,
+    "stop" : 1738790287029,
+    "duration" : 1728
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,8 +14,8 @@
   "beforeStages" : [ {
     "name" : "setUpClient",
     "time" : {
-      "start" : 1738779226189,
-      "stop" : 1738779226189,
+      "start" : 1738790282393,
+      "stop" : 1738790282393,
       "duration" : 0
     },
     "description" : "",
@@ -30,9 +30,9 @@
   }, {
     "name" : "setUp",
     "time" : {
-      "start" : 1738779223714,
-      "stop" : 1738779225583,
-      "duration" : 1869
+      "start" : 1738790279714,
+      "stop" : 1738790282084,
+      "duration" : 2370
     },
     "description" : "",
     "status" : "passed",
@@ -53,7 +53,7 @@
     "value" : "api.tests.PullRequestTests"
   }, {
     "name" : "testMethod",
-    "value" : "testClosePullRequest"
+    "value" : "closePullRequest"
   }, {
     "name" : "parentSuite",
     "value" : "GitHub MVP test suit"
@@ -65,10 +65,10 @@
     "value" : "api.tests.PullRequestTests"
   }, {
     "name" : "host",
-    "value" : "fv-az1279-21"
+    "value" : "fv-az1704-904"
   }, {
     "name" : "thread",
-    "value" : "1927@fv-az1279-21.TestNG-test-GitHub API MVP Tests-1(21)"
+    "value" : "1927@fv-az1704-904.TestNG-test-GitHub API MVP Tests-1(21)"
   }, {
     "name" : "framework",
     "value" : "testng"
@@ -95,6 +95,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "862c3127d02066cb.json",
+  "source" : "f9cc878a5e99176f.json",
   "parameterValues" : [ ]
 }

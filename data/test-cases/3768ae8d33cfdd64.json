@@ -1,12 +1,12 @@
 {
-  "uid" : "64dcb257499292e5",
+  "uid" : "3768ae8d33cfdd64",
   "name" : "deleteRepository",
   "fullName" : "api.tests.RepositoryTests.deleteRepository",
   "historyId" : "46581f93babdae9313226e292c5da4f2",
   "time" : {
-    "start" : 1738779227725,
-    "stop" : 1738779228213,
-    "duration" : 488
+    "start" : 1738790283852,
+    "stop" : 1738790284177,
+    "duration" : 325
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,8 +14,8 @@
   "beforeStages" : [ {
     "name" : "setUpClient",
     "time" : {
-      "start" : 1738779225606,
-      "stop" : 1738779225606,
+      "start" : 1738790282116,
+      "stop" : 1738790282116,
       "duration" : 0
     },
     "description" : "",
@@ -30,9 +30,9 @@
   }, {
     "name" : "setUp",
     "time" : {
-      "start" : 1738779223714,
-      "stop" : 1738779225583,
-      "duration" : 1869
+      "start" : 1738790279714,
+      "stop" : 1738790282084,
+      "duration" : 2370
     },
     "description" : "",
     "status" : "passed",
@@ -65,10 +65,10 @@
     "value" : "api.tests.RepositoryTests"
   }, {
     "name" : "host",
-    "value" : "fv-az1279-21"
+    "value" : "fv-az1704-904"
   }, {
     "name" : "thread",
-    "value" : "1927@fv-az1279-21.TestNG-test-GitHub API MVP Tests-2(22)"
+    "value" : "1927@fv-az1704-904.TestNG-test-GitHub API MVP Tests-2(22)"
   }, {
     "name" : "framework",
     "value" : "testng"
@@ -95,6 +95,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "64dcb257499292e5.json",
+  "source" : "3768ae8d33cfdd64.json",
   "parameterValues" : [ ]
 }
