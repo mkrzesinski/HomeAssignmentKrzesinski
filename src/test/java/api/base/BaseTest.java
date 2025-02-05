@@ -9,12 +9,18 @@ import io.restassured.http.ContentType;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
+import java.util.UUID;
+
 public class BaseTest {
 
     protected static final String GITHUB_USER_NAME = System.getenv("GITHUB_USER_NAME");
     protected static final String GITHUB_USER_TOKEN = System.getenv("GITHUB_USER_TOKEN");
     protected static final String INIT_REPOSITORY_NAME = "InitRepository";
     protected ApiClient apiClient;
+
+    protected static String generateRandomPostFix() {
+        return UUID.randomUUID().toString().replace("-", "").substring(0, 10);
+    }
 
     @BeforeSuite
     public void checkSecrets() {

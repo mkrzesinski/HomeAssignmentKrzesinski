@@ -35,4 +35,24 @@ public class ApiClient {
     public PatchIssue editIssue(String token, String requestBody, String userName, String repositoryName, int issueId) {
         return new PatchIssue(this.requestSpecBuilderSupplier.get(), token, requestBody, userName, repositoryName, issueId);
     }
+
+    public PostPullRequest createNewPullRequest(String token, String requestBody, String userName, String repositoryName) {
+        return new PostPullRequest(this.requestSpecBuilderSupplier.get(), token, requestBody, userName, repositoryName);
+    }
+
+    public PutMergePullRequest mergePullRequest(String token, String userName, String repositoryName, int pullRequestId) {
+        return new PutMergePullRequest(this.requestSpecBuilderSupplier.get(), token, userName, repositoryName, pullRequestId);
+    }
+
+    public PatchClosePullRequest closePullRequest(String token, String requestBody, String userName, String repositoryName, int pullRequestId) {
+        return new PatchClosePullRequest(this.requestSpecBuilderSupplier.get(), token, requestBody, userName, repositoryName, pullRequestId);
+    }
+
+    public GetFileSha getFileSha(String token, String userName, String repositoryName, String filePath) {
+        return new GetFileSha(this.requestSpecBuilderSupplier.get(), token, userName, repositoryName, filePath);
+    }
+
+    public PutUpdateFile updateFile(String token, String requestBody, String userName, String repositoryName, String filePath) {
+        return new PutUpdateFile(this.requestSpecBuilderSupplier.get(), token, requestBody, userName, repositoryName, filePath);
+    }
 }

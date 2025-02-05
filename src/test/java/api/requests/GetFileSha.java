@@ -6,14 +6,15 @@ import io.restassured.response.Response;
 
 import static io.restassured.RestAssured.given;
 
-public class PostNewIssue implements ExecutableRequest {
+public class GetFileSha implements ExecutableRequest {
     private final RequestSpecBuilder requestSpecBuilder;
-
-    public PostNewIssue(RequestSpecBuilder requestSpecBuilder, String token, String requestBody, String userName, String repositoryName) {
+    public GetFileSha(RequestSpecBuilder requestSpecBuilder, String token, String userName, String repositoryName, String filePath) {
         this.requestSpecBuilder = requestSpecBuilder;
         this.requestSpecBuilder.addHeader("Content-Type", "application/json");
         this.requestSpecBuilder.addHeader("Authorization", "token " + token);
-        this.requestSpecBuilder.setBody(requestBody);
+        this.requestSpecBuilder.addPathParam("userName", userName);
+        this.requestSpecBuilder.addPathParam("repositoryName", repositoryName);
+        this.requestSpecBuilder.addPathParam("filePath", filePath);
     }
 
     @Override
@@ -21,6 +22,6 @@ public class PostNewIssue implements ExecutableRequest {
         return given()
                 .spec(requestSpecBuilder.build())
                 .when()
-                .post("repos/{userName}/{repositoryName}/issues");
+                .get("repos/{userName}/{repositoryName}/contents/{filePath}");
     }
 }

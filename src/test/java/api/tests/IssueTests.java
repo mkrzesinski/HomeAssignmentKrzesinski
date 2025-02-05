@@ -24,17 +24,11 @@ public class IssueTests extends BaseTest {
     private static final String ISSUE_BODY = "Test Issue Body";
     private static final String ISSUE_STATE_OPEN = "open";
     private static final String ISSUE_STATE_CLOSED = "closed";
-
     private static final String EDITED_ISSUE_TITLE = "Test Issue Title " + generateRandomPostFix();
     private static final String EDITED_ISSUE_BODY = "Test Issue Body";
-
     private GitHubIssue gitHubIssue;
     private String requestBody;
     private int issueId;
-
-    private static String generateRandomPostFix() {
-        return UUID.randomUUID().toString().replace("-", "").substring(0, 10);
-    }
 
     @Test(priority = 1)
     public void createAndDeleteIssue() throws JsonProcessingException {

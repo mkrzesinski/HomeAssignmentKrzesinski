@@ -6,14 +6,17 @@ import io.restassured.response.Response;
 
 import static io.restassured.RestAssured.given;
 
-public class PostNewIssue implements ExecutableRequest {
+public class PostPullRequest implements ExecutableRequest {
+
     private final RequestSpecBuilder requestSpecBuilder;
 
-    public PostNewIssue(RequestSpecBuilder requestSpecBuilder, String token, String requestBody, String userName, String repositoryName) {
+    public PostPullRequest(RequestSpecBuilder requestSpecBuilder, String token, String requestBody, String userName, String repositoryName) {
         this.requestSpecBuilder = requestSpecBuilder;
         this.requestSpecBuilder.addHeader("Content-Type", "application/json");
         this.requestSpecBuilder.addHeader("Authorization", "token " + token);
         this.requestSpecBuilder.setBody(requestBody);
+        this.requestSpecBuilder.addPathParam("userName", userName);
+        this.requestSpecBuilder.addPathParam("repositoryName", repositoryName);
     }
 
     @Override
@@ -21,6 +24,6 @@ public class PostNewIssue implements ExecutableRequest {
         return given()
                 .spec(requestSpecBuilder.build())
                 .when()
-                .post("repos/{userName}/{repositoryName}/issues");
+                .post("repos/{userName}/{repositoryName}/pulls");
     }
 }
