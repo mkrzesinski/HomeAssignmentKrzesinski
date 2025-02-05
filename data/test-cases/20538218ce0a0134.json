@@ -1,12 +1,12 @@
 {
-  "uid" : "95aa5fde5ddfa59d",
+  "uid" : "20538218ce0a0134",
   "name" : "createPullRequest",
   "fullName" : "api.tests.PullRequestTests.createPullRequest",
   "historyId" : "3e91b6bad3208e353bd79626957e932e",
   "time" : {
-    "start" : 1738790282396,
-    "stop" : 1738790284039,
-    "duration" : 1643
+    "start" : 1738791298689,
+    "stop" : 1738791300172,
+    "duration" : 1483
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,9 +14,9 @@
   "beforeStages" : [ {
     "name" : "setUpClient",
     "time" : {
-      "start" : 1738790282393,
-      "stop" : 1738790282393,
-      "duration" : 0
+      "start" : 1738791298686,
+      "stop" : 1738791298687,
+      "duration" : 1
     },
     "description" : "",
     "status" : "passed",
@@ -30,9 +30,9 @@
   }, {
     "name" : "setUp",
     "time" : {
-      "start" : 1738790279714,
-      "stop" : 1738790282084,
-      "duration" : 2370
+      "start" : 1738791296930,
+      "stop" : 1738791298411,
+      "duration" : 1481
     },
     "description" : "",
     "status" : "passed",
@@ -65,10 +65,10 @@
     "value" : "api.tests.PullRequestTests"
   }, {
     "name" : "host",
-    "value" : "fv-az1704-904"
+    "value" : "fv-az1118-845"
   }, {
     "name" : "thread",
-    "value" : "1927@fv-az1704-904.TestNG-test-GitHub API MVP Tests-1(21)"
+    "value" : "1918@fv-az1118-845.TestNG-test-GitHub API MVP Tests-1(21)"
   }, {
     "name" : "framework",
     "value" : "testng"
@@ -95,6 +95,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "95aa5fde5ddfa59d.json",
+  "source" : "20538218ce0a0134.json",
   "parameterValues" : [ ]
 }

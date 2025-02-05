@@ -1,110 +1,110 @@
 [ {
-  "uid" : "470e472b278865ef",
-  "name" : "mergePullRequest",
-  "time" : {
-    "start" : 1738790284042,
-    "stop" : 1738790285298,
-    "duration" : 1256
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "b7d1dc36a369c512",
-  "name" : "createAndDeleteIssue",
-  "time" : {
-    "start" : 1738790283312,
-    "stop" : 1738790283636,
-    "duration" : 324
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "f9cc878a5e99176f",
-  "name" : "closePullRequest",
-  "time" : {
-    "start" : 1738790285301,
-    "stop" : 1738790287029,
-    "duration" : 1728
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "62ba6512ec60be63",
-  "name" : "closeIssue",
-  "time" : {
-    "start" : 1738790284601,
-    "stop" : 1738790285262,
-    "duration" : 661
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "3768ae8d33cfdd64",
-  "name" : "deleteRepository",
-  "time" : {
-    "start" : 1738790283852,
-    "stop" : 1738790284177,
-    "duration" : 325
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "95aa5fde5ddfa59d",
-  "name" : "createPullRequest",
-  "time" : {
-    "start" : 1738790282396,
-    "stop" : 1738790284039,
-    "duration" : 1643
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "6fb6c7bd455a8f84",
+  "uid" : "2a2276a9258ca11d",
   "name" : "successfullLogin",
   "time" : {
-    "start" : 1738790282155,
-    "stop" : 1738790282288,
-    "duration" : 133
+    "start" : 1738791298468,
+    "stop" : 1738791298596,
+    "duration" : 128
   },
   "status" : "passed",
   "severity" : "critical"
 }, {
-  "uid" : "56b14b12b0908740",
-  "name" : "unsuccessfullLoginWithInvalidToken",
+  "uid" : "20538218ce0a0134",
+  "name" : "createPullRequest",
   "time" : {
-    "start" : 1738790282345,
-    "stop" : 1738790282389,
-    "duration" : 44
+    "start" : 1738791298689,
+    "stop" : 1738791300172,
+    "duration" : 1483
   },
   "status" : "passed",
   "severity" : "critical"
 }, {
-  "uid" : "bd363cd8dd77ae2c",
+  "uid" : "53ecaff2dc16c7fe",
   "name" : "editIssue",
   "time" : {
-    "start" : 1738790284180,
-    "stop" : 1738790284598,
-    "duration" : 418
+    "start" : 1738791301721,
+    "stop" : 1738791302095,
+    "duration" : 374
   },
   "status" : "passed",
   "severity" : "critical"
 }, {
-  "uid" : "616af1519ee6e494",
+  "uid" : "55c0180f77b06849",
+  "name" : "closePullRequest",
+  "time" : {
+    "start" : 1738791302100,
+    "stop" : 1738791303809,
+    "duration" : 1709
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "91171f6daa923bb4",
+  "name" : "createAndDeleteIssue",
+  "time" : {
+    "start" : 1738791300176,
+    "stop" : 1738791300472,
+    "duration" : 296
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "3bc8fa5e644effa8",
   "name" : "createRepository",
   "time" : {
-    "start" : 1738790282155,
-    "stop" : 1738790283307,
-    "duration" : 1152
+    "start" : 1738791298468,
+    "stop" : 1738791302327,
+    "duration" : 3859
   },
   "status" : "passed",
   "severity" : "critical"
 }, {
-  "uid" : "c73e95c81ff4f6c3",
+  "uid" : "66a4da541911c3c4",
   "name" : "cloneRepository",
   "time" : {
-    "start" : 1738790283640,
-    "stop" : 1738790283848,
-    "duration" : 208
+    "start" : 1738791302329,
+    "stop" : 1738791302519,
+    "duration" : 190
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "96a508ca083e3275",
+  "name" : "mergePullRequest",
+  "time" : {
+    "start" : 1738791300476,
+    "stop" : 1738791301718,
+    "duration" : 1242
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "a9ccbb7d9c9d1d8d",
+  "name" : "closeIssue",
+  "time" : {
+    "start" : 1738791302772,
+    "stop" : 1738791303300,
+    "duration" : 528
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "31f74c3dbecb4c16",
+  "name" : "deleteRepository",
+  "time" : {
+    "start" : 1738791302522,
+    "stop" : 1738791302769,
+    "duration" : 247
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "92f6118fb48225e",
+  "name" : "unsuccessfullLoginWithInvalidToken",
+  "time" : {
+    "start" : 1738791298638,
+    "stop" : 1738791298683,
+    "duration" : 45
   },
   "status" : "passed",
   "severity" : "critical"
