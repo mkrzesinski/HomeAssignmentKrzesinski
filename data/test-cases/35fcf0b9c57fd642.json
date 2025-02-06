@@ -1,0 +1,100 @@
+{
+  "uid" : "35fcf0b9c57fd642",
+  "name" : "mergePullRequest",
+  "fullName" : "api.tests.PullRequestTests.mergePullRequest",
+  "historyId" : "2f7becc6da1e89e6cf2c6d4eb7bf745d",
+  "time" : {
+    "start" : 1738834818893,
+    "stop" : 1738834820162,
+    "duration" : 1269
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setUpClient",
+    "time" : {
+      "start" : 1738834817514,
+      "stop" : 1738834817514,
+      "duration" : 0
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1738834815054,
+      "stop" : 1738834817213,
+      "duration" : 2159
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "api.tests.PullRequestTests"
+  }, {
+    "name" : "testClass",
+    "value" : "api.tests.PullRequestTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "mergePullRequest"
+  }, {
+    "name" : "parentSuite",
+    "value" : "GitHub MVP test suit"
+  }, {
+    "name" : "suite",
+    "value" : "GitHub API MVP Tests"
+  }, {
+    "name" : "subSuite",
+    "value" : "api.tests.PullRequestTests"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1971-247"
+  }, {
+    "name" : "thread",
+    "value" : "1999@fv-az1971-247.TestNG-test-GitHub API MVP Tests-1(21)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "feature",
+    "value" : "GitHub MVP tests - Pull requests"
+  }, {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "critical",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "35fcf0b9c57fd642.json",
+  "parameterValues" : [ ]
+}

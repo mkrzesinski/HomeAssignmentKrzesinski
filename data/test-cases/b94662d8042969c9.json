@@ -1,0 +1,100 @@
+{
+  "uid" : "b94662d8042969c9",
+  "name" : "unsuccessfullLoginWithInvalidToken",
+  "fullName" : "api.tests.LoginTests.unsuccessfullLoginWithInvalidToken",
+  "historyId" : "b4e5097273b211af3f61b731a21491de",
+  "time" : {
+    "start" : 1738834817448,
+    "stop" : 1738834817511,
+    "duration" : 63
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setUpClient",
+    "time" : {
+      "start" : 1738834817236,
+      "stop" : 1738834817236,
+      "duration" : 0
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1738834815054,
+      "stop" : 1738834817213,
+      "duration" : 2159
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "api.tests.LoginTests"
+  }, {
+    "name" : "testClass",
+    "value" : "api.tests.LoginTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "unsuccessfullLoginWithInvalidToken"
+  }, {
+    "name" : "parentSuite",
+    "value" : "GitHub MVP test suit"
+  }, {
+    "name" : "suite",
+    "value" : "GitHub API MVP Tests"
+  }, {
+    "name" : "subSuite",
+    "value" : "api.tests.LoginTests"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1971-247"
+  }, {
+    "name" : "thread",
+    "value" : "1999@fv-az1971-247.TestNG-test-GitHub API MVP Tests-1(21)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "feature",
+    "value" : "GitHub MVP tests - Login"
+  }, {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "critical",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "b94662d8042969c9.json",
+  "parameterValues" : [ ]
+}

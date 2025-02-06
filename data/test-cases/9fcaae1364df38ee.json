@@ -1,0 +1,100 @@
+{
+  "uid" : "9fcaae1364df38ee",
+  "name" : "cloneRepository",
+  "fullName" : "api.tests.RepositoryTests.cloneRepository",
+  "historyId" : "3b788fb3926a9b7793dcc46c642b7666",
+  "time" : {
+    "start" : 1738834818765,
+    "stop" : 1738834818973,
+    "duration" : 208
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setUpClient",
+    "time" : {
+      "start" : 1738834817236,
+      "stop" : 1738834817236,
+      "duration" : 0
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1738834815054,
+      "stop" : 1738834817213,
+      "duration" : 2159
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "api.tests.RepositoryTests"
+  }, {
+    "name" : "testClass",
+    "value" : "api.tests.RepositoryTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "cloneRepository"
+  }, {
+    "name" : "parentSuite",
+    "value" : "GitHub MVP test suit"
+  }, {
+    "name" : "suite",
+    "value" : "GitHub API MVP Tests"
+  }, {
+    "name" : "subSuite",
+    "value" : "api.tests.RepositoryTests"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1971-247"
+  }, {
+    "name" : "thread",
+    "value" : "1999@fv-az1971-247.TestNG-test-GitHub API MVP Tests-2(22)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "feature",
+    "value" : "GitHub MVP tests - Repository"
+  }, {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "critical",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "9fcaae1364df38ee.json",
+  "parameterValues" : [ ]
+}
