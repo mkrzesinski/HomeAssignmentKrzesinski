@@ -1,12 +1,12 @@
 {
-  "uid" : "d2d2b25972d2190",
-  "name" : "editIssue",
-  "fullName" : "api.tests.IssueTests.editIssue",
-  "historyId" : "669a68eddeef9181363fed4929293c4a",
+  "uid" : "85b9fdf2644ffbda",
+  "name" : "mergePullRequest",
+  "fullName" : "api.tests.PullRequestTests.mergePullRequest",
+  "historyId" : "2f7becc6da1e89e6cf2c6d4eb7bf745d",
   "time" : {
-    "start" : 1738835471334,
-    "stop" : 1738835471808,
-    "duration" : 474
+    "start" : 1738878140923,
+    "stop" : 1738878142256,
+    "duration" : 1333
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,9 +14,9 @@
   "beforeStages" : [ {
     "name" : "setUpClient",
     "time" : {
-      "start" : 1738835470501,
-      "stop" : 1738835470501,
-      "duration" : 0
+      "start" : 1738878139517,
+      "stop" : 1738878139518,
+      "duration" : 1
     },
     "description" : "",
     "status" : "passed",
@@ -30,9 +30,9 @@
   }, {
     "name" : "setUp",
     "time" : {
-      "start" : 1738835467661,
-      "stop" : 1738835469347,
-      "duration" : 1686
+      "start" : 1738878137567,
+      "stop" : 1738878139226,
+      "duration" : 1659
     },
     "description" : "",
     "status" : "passed",
@@ -47,13 +47,13 @@
   "afterStages" : [ ],
   "labels" : [ {
     "name" : "package",
-    "value" : "api.tests.IssueTests"
+    "value" : "api.tests.PullRequestTests"
   }, {
     "name" : "testClass",
-    "value" : "api.tests.IssueTests"
+    "value" : "api.tests.PullRequestTests"
   }, {
     "name" : "testMethod",
-    "value" : "editIssue"
+    "value" : "mergePullRequest"
   }, {
     "name" : "parentSuite",
     "value" : "GitHub MVP test suit"
@@ -62,13 +62,13 @@
     "value" : "GitHub API MVP Tests"
   }, {
     "name" : "subSuite",
-    "value" : "api.tests.IssueTests"
+    "value" : "api.tests.PullRequestTests"
   }, {
     "name" : "host",
-    "value" : "fv-az2029-836"
+    "value" : "fv-az1964-794"
   }, {
     "name" : "thread",
-    "value" : "1944@fv-az2029-836.TestNG-test-GitHub API MVP Tests-2(22)"
+    "value" : "1953@fv-az1964-794.TestNG-test-GitHub API MVP Tests-1(21)"
   }, {
     "name" : "framework",
     "value" : "testng"
@@ -77,7 +77,7 @@
     "value" : "java"
   }, {
     "name" : "feature",
-    "value" : "GitHub MVP tests - Issues"
+    "value" : "GitHub MVP tests - Pull requests"
   }, {
     "name" : "severity",
     "value" : "critical"
@@ -95,6 +95,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "d2d2b25972d2190.json",
+  "source" : "85b9fdf2644ffbda.json",
   "parameterValues" : [ ]
 }
