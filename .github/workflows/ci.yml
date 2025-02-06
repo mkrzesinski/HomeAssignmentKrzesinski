@@ -11,7 +11,7 @@ on:
 
 permissions:
   contents: write
-name: Run Tests on Push
+  name: Run Tests on Push
 
 on:
   push:
