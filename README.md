@@ -68,7 +68,8 @@ To reach secrets please email me directly with `maciej.krzesinski@gmail.com`**
 
 #### 1. Run by Github Actions 
 Repository has configured CI aspect using Github actions. Trigger for test run is push to master branch.
-Beside of that you can re run last workflow run for master branch so this will trigger new tests run.<br>
+You can fork repository and trigger builds.<br>
+Beside of that you can reach author `maciej.krzesinski@gmail.com` to add you as a contributor and be able to run last workflow run for master branch so this will trigger new tests run.<br>
 GitHub actions for this repository can be reached here:
 > https://github.com/mkrzesinski/HomeAssignmentKrzesinski/actions
 
