@@ -7,26 +7,26 @@
       "name" : "LoginTests",
       "children" : [ {
         "name" : "successfullLogin",
-        "uid" : "e59fa1c6b116a8e2",
+        "uid" : "3171ea60179e9e34",
         "parentUid" : "9fd08a254f68456e2eee470797541e46",
         "status" : "passed",
         "time" : {
-          "start" : 1738792334617,
-          "stop" : 1738792334884,
-          "duration" : 267
+          "start" : 1738830043861,
+          "stop" : 1738830044031,
+          "duration" : 170
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "unsuccessfullLoginWithInvalidToken",
-        "uid" : "8cb2e8bcf2f7406c",
+        "uid" : "f38ff8be93bd8fcb",
         "parentUid" : "9fd08a254f68456e2eee470797541e46",
         "status" : "passed",
         "time" : {
-          "start" : 1738792334923,
-          "stop" : 1738792335119,
-          "duration" : 196
+          "start" : 1738830044079,
+          "stop" : 1738830044169,
+          "duration" : 90
         },
         "flaky" : false,
         "newFailed" : false,
@@ -37,39 +37,39 @@
       "name" : "RepositoryTests",
       "children" : [ {
         "name" : "createRepository",
-        "uid" : "567f5a8870396627",
+        "uid" : "cb3c27b7c0ac9f71",
         "parentUid" : "e8663e598755da5f1ce1f98f2f74b293",
         "status" : "passed",
         "time" : {
-          "start" : 1738792334618,
-          "stop" : 1738792335643,
-          "duration" : 1025
+          "start" : 1738830043861,
+          "stop" : 1738830044990,
+          "duration" : 1129
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "cloneRepository",
-        "uid" : "337a4d0aa5f2fc89",
+        "uid" : "37408a23636d4ed4",
         "parentUid" : "e8663e598755da5f1ce1f98f2f74b293",
         "status" : "passed",
         "time" : {
-          "start" : 1738792336098,
-          "stop" : 1738792336458,
-          "duration" : 360
+          "start" : 1738830045306,
+          "stop" : 1738830045523,
+          "duration" : 217
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "deleteRepository",
-        "uid" : "a044152ef007f418",
+        "uid" : "ff190f7de736bdec",
         "parentUid" : "e8663e598755da5f1ce1f98f2f74b293",
         "status" : "passed",
         "time" : {
-          "start" : 1738792336461,
-          "stop" : 1738792336933,
-          "duration" : 472
+          "start" : 1738830045527,
+          "stop" : 1738830045847,
+          "duration" : 320
         },
         "flaky" : false,
         "newFailed" : false,
@@ -80,39 +80,39 @@
       "name" : "PullRequestTests",
       "children" : [ {
         "name" : "createPullRequest",
-        "uid" : "c5abc265e4ac68ea",
+        "uid" : "a7e8cbc7c4784310",
         "parentUid" : "98002c3c78ccc835ec800c7435598187",
         "status" : "passed",
         "time" : {
-          "start" : 1738792335125,
-          "stop" : 1738792337301,
-          "duration" : 2176
+          "start" : 1738830044176,
+          "stop" : 1738830045960,
+          "duration" : 1784
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "mergePullRequest",
-        "uid" : "42fd2a0159bc05e6",
+        "uid" : "2ea22dc197859725",
         "parentUid" : "98002c3c78ccc835ec800c7435598187",
         "status" : "passed",
         "time" : {
-          "start" : 1738792337305,
-          "stop" : 1738792338852,
-          "duration" : 1547
+          "start" : 1738830045963,
+          "stop" : 1738830047147,
+          "duration" : 1184
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "closePullRequest",
-        "uid" : "3dc9260ff5f01a3f",
+        "uid" : "5d6c3ed3cced4def",
         "parentUid" : "98002c3c78ccc835ec800c7435598187",
         "status" : "passed",
         "time" : {
-          "start" : 1738792338855,
-          "stop" : 1738792341325,
-          "duration" : 2470
+          "start" : 1738830047151,
+          "stop" : 1738830048880,
+          "duration" : 1729
         },
         "flaky" : false,
         "newFailed" : false,
@@ -123,39 +123,39 @@
       "name" : "IssueTests",
       "children" : [ {
         "name" : "createAndDeleteIssue",
-        "uid" : "b528efeee3c4dc8f",
+        "uid" : "9401fd26aa0d71b",
         "parentUid" : "ea77e072e280236fea7c9c2ffb655aa6",
         "status" : "passed",
         "time" : {
-          "start" : 1738792335647,
-          "stop" : 1738792336094,
-          "duration" : 447
+          "start" : 1738830044995,
+          "stop" : 1738830045302,
+          "duration" : 307
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "editIssue",
-        "uid" : "1d9bf2feafdfe0dc",
+        "uid" : "f0e55a995274a61d",
         "parentUid" : "ea77e072e280236fea7c9c2ffb655aa6",
         "status" : "passed",
         "time" : {
-          "start" : 1738792336941,
-          "stop" : 1738792337526,
-          "duration" : 585
+          "start" : 1738830045850,
+          "stop" : 1738830046341,
+          "duration" : 491
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "closeIssue",
-        "uid" : "ac66da1560fcf11b",
+        "uid" : "b975b02e9e827bb0",
         "parentUid" : "ea77e072e280236fea7c9c2ffb655aa6",
         "status" : "passed",
         "time" : {
-          "start" : 1738792337529,
-          "stop" : 1738792338196,
-          "duration" : 667
+          "start" : 1738830046344,
+          "stop" : 1738830046903,
+          "duration" : 559
         },
         "flaky" : false,
         "newFailed" : false,

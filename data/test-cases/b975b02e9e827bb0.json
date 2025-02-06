@@ -1,12 +1,12 @@
 {
-  "uid" : "337a4d0aa5f2fc89",
-  "name" : "cloneRepository",
-  "fullName" : "api.tests.RepositoryTests.cloneRepository",
-  "historyId" : "3b788fb3926a9b7793dcc46c642b7666",
+  "uid" : "b975b02e9e827bb0",
+  "name" : "closeIssue",
+  "fullName" : "api.tests.IssueTests.closeIssue",
+  "historyId" : "61e12a4dd0b760fe9ef8f096fcf7a6fa",
   "time" : {
-    "start" : 1738792336098,
-    "stop" : 1738792336458,
-    "duration" : 360
+    "start" : 1738830046344,
+    "stop" : 1738830046903,
+    "duration" : 559
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,8 +14,8 @@
   "beforeStages" : [ {
     "name" : "setUpClient",
     "time" : {
-      "start" : 1738792334584,
-      "stop" : 1738792334584,
+      "start" : 1738830044992,
+      "stop" : 1738830044992,
       "duration" : 0
     },
     "description" : "",
@@ -30,9 +30,9 @@
   }, {
     "name" : "setUp",
     "time" : {
-      "start" : 1738792332610,
-      "stop" : 1738792334560,
-      "duration" : 1950
+      "start" : 1738830042253,
+      "stop" : 1738830043808,
+      "duration" : 1555
     },
     "description" : "",
     "status" : "passed",
@@ -47,13 +47,13 @@
   "afterStages" : [ ],
   "labels" : [ {
     "name" : "package",
-    "value" : "api.tests.RepositoryTests"
+    "value" : "api.tests.IssueTests"
   }, {
     "name" : "testClass",
-    "value" : "api.tests.RepositoryTests"
+    "value" : "api.tests.IssueTests"
   }, {
     "name" : "testMethod",
-    "value" : "cloneRepository"
+    "value" : "closeIssue"
   }, {
     "name" : "parentSuite",
     "value" : "GitHub MVP test suit"
@@ -62,13 +62,13 @@
     "value" : "GitHub API MVP Tests"
   }, {
     "name" : "subSuite",
-    "value" : "api.tests.RepositoryTests"
+    "value" : "api.tests.IssueTests"
   }, {
     "name" : "host",
-    "value" : "fv-az2020-106"
+    "value" : "fv-az1937-779"
   }, {
     "name" : "thread",
-    "value" : "1913@fv-az2020-106.TestNG-test-GitHub API MVP Tests-2(22)"
+    "value" : "1940@fv-az1937-779.TestNG-test-GitHub API MVP Tests-2(22)"
   }, {
     "name" : "framework",
     "value" : "testng"
@@ -77,7 +77,7 @@
     "value" : "java"
   }, {
     "name" : "feature",
-    "value" : "GitHub MVP tests - Repository"
+    "value" : "GitHub MVP tests - Issues"
   }, {
     "name" : "severity",
     "value" : "critical"
@@ -95,6 +95,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "337a4d0aa5f2fc89.json",
+  "source" : "b975b02e9e827bb0.json",
   "parameterValues" : [ ]
 }
