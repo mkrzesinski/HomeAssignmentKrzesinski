@@ -11,12 +11,11 @@
 
 ## General description <a id="gendescr"></a>
 
-This repository is an implementation of an assignment described in file 'Automation and Quality Home Assignement':
+This repository is an implementation of an example test framework that implement basic structure for API and UI tests.
 
-> Guidelines<br>
-> As the first Automation Developer testing Github.com you are required to develop
+> It implements tests for:
 > Sanity tests of 4 MVP capabilities.<br>
-> When you Create the tests focusing on :
+> Contains the tests focusing on :
 > - Priority - try to take the most commonly use case you can think of when
 > working with github.com
 > - Code Quality - try to keep you code as self explanatory as possible
@@ -25,16 +24,12 @@ possible
 > - Extendability (there are talks of adding the same test to azure devops or
 Gitlab)<br><br>
 > Guidelines:<br>
-> - Project Management: Utilize Maven or an equivalent tool to manage your project,
+> - Project Management: Utilizes Maven or an equivalent tool to manage your project,
 including dependencies, build processes, and testing configuration
-> - Testing: Employ TestNG or an equivalent to create a comprehensive suite of
+> - Testing: Employs TestNG or an equivalent to create a comprehensive suite of
 tests that ensure your application functions as expected under various scenarios.
-> - Concurrency: Implement concurrency in your application to improve performance
+> - Concurrency: Implements concurrency in your application to improve performance
 and efficiency, particularly when dealing with external API requests.<br><br>
-> Submission:<br>
-Please create and share a github repository with your assignment solution in the
-solution add a readme file describing how can we use the project in order to verify
-working
 
 ## Test framework <a id="testframework"></a>
 
